@@ -196,6 +196,11 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 100;
   font-style: normal;
 }
+main {
+  background: linear-gradient(90deg, #FDFCFB 0%, #E2D1C3 100%);
+  font-family: "Helvetica Neue", sans-serif;
+}
+
 body::-webkit-scrollbar {
   width: 10px;
   background-color: #f9f9fd;
@@ -271,8 +276,30 @@ body::-webkit-scrollbar-track {
 .inject {
   display: flex;
 }
+.inject__info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.inject__info h1 {
+  font-size: 6.3492063492vw;
+  color: #492E18;
+}
+.inject__info-wrapper {
+  display: flex;
+  flex-direction: column;
+  margin-left: 8.1349206349vw;
+  margin-right: 1.455026455vw;
+}
+.inject__info-wrapper p {
+  margin-top: 4.6296296296vw;
+  margin-left: 0.462962963vw;
+  width: 30.0925925926vw;
+  font-size: 1.8518518519vw;
+  color: rgba(95, 61, 33, 0.8);
+}
 .inject__photo {
-  width: 46.4947089947vw;
+  min-width: 46.4947089947vw;
   margin-left: auto;
 }
 .inject__photo img {

@@ -3,6 +3,10 @@
 
 $w: (100vw / 1512);
 
+main {
+  background: linear-gradient(90deg, #FDFCFB 0%, #E2D1C3 100%);
+  font-family: 'Helvetica Neue', sans-serif;
+}
 
 body::-webkit-scrollbar {
   width: 10px;
@@ -90,10 +94,34 @@ body::-webkit-scrollbar-track {
 .inject {
   display: flex;
 
-  &__info {}
+  &__info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    h1 {
+      font-size: ($w * 96);
+      color: #492E18;
+    }
+  }
+
+  &__info-wrapper {
+    display: flex;
+    flex-direction: column;
+    margin-left: ($w * 123);
+    margin-right: ($w * 22);
+
+    p {
+      margin-top: ($w * 70);
+      margin-left: ($w * 7);
+      width: ($w * 455);
+      font-size: ($w * 28);
+      color: rgba(95, 61, 33, 0.8);
+    }
+  }
 
   &__photo {
-    width: ($w * 703);
+    min-width: ($w * 703);
     margin-left: auto;
 
     img {
