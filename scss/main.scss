@@ -1,0 +1,103 @@
+@import 'null';
+@import 'fonts';
+
+$w: (100vw / 1512);
+
+
+body::-webkit-scrollbar {
+  width: 10px;
+  background-color: #f9f9fd;
+}
+
+body::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: #E2D1C3;
+}
+
+body::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.2);
+  border-radius: 10px;
+  background-color: #f9f9fd;
+}
+
+// header
+.header {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(12, 12, 12, 0.1);
+  padding: ($w * 20) ($w * 130);
+
+  &__logo {
+    width: ($w * 237);
+
+    img {
+      width: 100%;
+    }
+  }
+
+  &__menu {
+    margin-left: ($w * 109);
+
+    a {
+      position: relative;
+      line-height: 1;
+      font-family: 'Helvetica Neue', sans-serif;
+      font-size: ($w * 20);
+      line-height: 97.3%;
+      color: #341E0B;
+      margin-right: ($w * 90);
+
+      &:last-child {
+        margin-right: 0;
+      }
+
+      &:after {
+        display: block;
+        position: absolute;
+        left: 0; /*изменить на right:0;, чтобы изменить направление подчёркивания */
+        width: 0;/*задаём длинну линии до наведения курсора*/
+        height: 2px; /*задаём ширину линии*/
+        background-color: #341E0B; /*задаём цвет линии*/
+        content: "";
+        transition: width 0.3s ease-out; /*задаём время анимации*/
+      }
+      
+      &:hover:after,
+      &:focus:after {
+        width: 100%; /*устанавливаем значение 100% чтобы ссылка подчёркивалась полностью*/
+      }
+    }
+  }
+
+  &__inst {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    width: ($w * 45);
+    height: ($w * 45);
+
+    img {
+      width: 100%;
+    }
+  }
+}
+
+.inject {
+  display: flex;
+
+  &__info {}
+
+  &__photo {
+    width: ($w * 703);
+    margin-left: auto;
+
+    img {
+      width: 100%;
+    }
+  }
+}
