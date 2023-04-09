@@ -27,6 +27,7 @@ body::-webkit-scrollbar-track {
 // header
 .header {
   position: fixed;
+  z-index: 100;
   display: flex;
   align-items: center;
   width: 100%;
@@ -84,6 +85,7 @@ body::-webkit-scrollbar-track {
     margin-left: auto;
     width: ($w * 45);
     height: ($w * 45);
+    padding: ($w * 5);
 
     img {
       width: 100%;
@@ -98,6 +100,7 @@ body::-webkit-scrollbar-track {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    margin-top: ($w * 255);
 
     h1 {
       font-size: ($w * 96);
@@ -118,14 +121,429 @@ body::-webkit-scrollbar-track {
       font-size: ($w * 28);
       color: rgba(95, 61, 33, 0.8);
     }
+
+    & > div {
+      margin-top: ($w * -7);
+      margin-right: ($w * 20);
+      margin-left: auto;
+      max-width: ($w * 262);
+      width: 100%;
+
+      img {
+        width: 100%;
+      }
+    }
   }
 
   &__photo {
-    min-width: ($w * 703);
+    min-width: ($w * 695);
     margin-left: auto;
 
     img {
       width: 100%;
     }
+  }
+}
+
+.dr {
+  margin-top: ($w * 150);
+
+  &__container {
+    max-width: ($w * 1310);
+    width: 100%;
+    margin-left: ($w * 130);
+    display: flex;
+  }
+
+  &__left {
+    max-width: ($w * 613);
+
+    &-wrapper {
+      position: relative;
+    }
+
+    &-def {
+      width: 100%;
+    }
+    &-abs {
+      position: absolute;
+      bottom: ($w * -112);
+      right: ($w * -121);
+      width: ($w * 340);
+    }
+  }
+
+  &__right {
+    margin-left: auto;
+    text-align: center;
+
+    h2 {
+      margin-top: ($w * -15);
+      font-style: italic;
+      font-weight: 500;
+      font-size: ($w * 64);
+      line-height: 97.3%;
+      color: #492E18;
+    }
+
+    h3 {
+      margin-top: ($w * 100);
+      color: #5F3D21;
+      font-style: italic;
+      font-weight: 300;
+      font-size: ($w * 32);
+      line-height: 97.3%;
+    }
+
+    &-list {
+      margin-top: ($w * 100);
+      text-align: left;
+      width: ($w * 404);
+      margin-left: ($w * 175);
+
+      a {
+        position: relative;
+        display: flex;
+        margin-left: auto;
+        margin-top: ($w * 120);
+        max-width: ($w * 182);
+        width: 100%;
+  
+        img {
+          width: 100%;
+        }
+  
+        p {
+          position: absolute;
+          bottom: 0;
+          right: ($w * 66);
+          font-weight: 500;
+          font-size: ($w * 28);
+          line-height: 159.5%;
+          color: #492E18;
+          width: ($w * 220);
+        }
+      }
+    }
+    
+    ul > li, p {
+      font-style: normal;
+      font-weight: 400;
+      font-size: ($w * 28);
+      line-height: 111.5%;
+      color: rgba(73, 46, 24, 0.8);
+    }
+
+    p {
+      color: rgba(73, 46, 24, 1);
+    }
+
+    ul {
+      margin-top: ($w * 30);
+
+      li {
+        margin-left: ($w * 42);
+        position: relative;
+        margin-top: ($w * 30);
+
+        &::before {
+          content: '';
+          position: absolute;
+          top: ($w * 12);
+          left: ($w * -25);
+          display: flex;
+          width: ($w * 8);
+          height: ($w * 8);
+          border-radius: 50%;
+          background-color: rgba(73, 46, 24, 0.8);
+        }
+      }
+    }
+  }
+}
+
+.services {
+  margin-top: ($w * 63);
+
+  &__container {
+    width: ($w * 1252);
+    margin: 0 auto;
+
+    h2 {
+      font-weight: 500;
+      font-size: ($w * 96);
+      line-height: 115%;
+      color: #5F3D21;
+      margin-bottom: ($w * 92);
+      padding-left: ($w * 10);
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+  }
+
+  &__left {
+    margin-right: ($w * 54);
+    margin-left: auto;
+      
+    ul {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      li {
+        position: relative;
+        text-align: right;
+        margin-bottom: ($w * 48);
+        font-size: ($w * 32);
+        line-height: 97.3%;
+        color: #492E18;
+        padding-right: ($w * 71);
+
+        &::before {
+          position: absolute;
+          top: ($w * -10);
+          right: 0;
+          content: '';
+          display: inline-block;
+          width: ($w * 45);
+          height: ($w * 45);
+          background: url('../img/arrow_3.svg') center / contain no-repeat;
+        }
+      }
+    }
+  }
+
+  &__right {
+    max-width: ($w * 616);
+    width: 100%;
+    position: relative;
+
+    img {
+      width: 100%;
+    }
+
+    a {
+      position: absolute;
+      left: ($w * -126);
+      bottom: ($w * -66);
+      display: flex;
+      margin-top: ($w * 120);
+      max-width: ($w * 182);
+      width: 100%;
+      margin-left: auto;
+
+      img {
+        width: 100%;
+      }
+
+      p {
+        position: absolute;
+        bottom: 0;
+        right: ($w * 72);
+        font-weight: 500;
+        font-size: ($w * 28);
+        line-height: 159.5%;
+        color: #492E18;
+      }
+    }
+  }
+}
+
+.learn {
+  margin-top: ($w * 218);
+
+  &__container {
+    max-width: ($w * 1252);
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  &__title {
+    width: ($w * 925);
+    font-weight: 500;
+    font-size: ($w * 64);
+    line-height: 97.3%;
+    color: #492E18;
+    margin-bottom: ($w * 75);
+
+    span {
+      text-transform: uppercase;
+      color: rgba(204, 51, 18, 1);
+    }
+  }
+
+  &__text {
+    width: ($w * 930);
+    font-weight: 400;
+    font-size: ($w * 32);
+    line-height: 120.3%;
+    color: rgba(73, 46, 24, 0.8);
+    margin-bottom: ($w * 75);
+  }
+
+  &__table {
+    display: flex;
+    justify-content: center;
+    margin-bottom: ($w * 75);
+
+    &-b1,
+    &-b2,
+    &-b3 {
+      font-weight: 500;
+      font-size: ($w * 32);
+      line-height: 100.5%;
+      text-align: center;
+      color: #492E18;
+      border: 1px solid #CC3312;
+      padding-top: ($w * 68);
+      padding-bottom: ($w * 68);
+    }
+
+    &-b1 {
+      width: ($w * 417);
+    }
+    &-b2 {
+      width: ($w * 369);
+    }
+    &-b3 {
+      width: ($w * 466);
+    }
+  }
+
+  &__subtext {
+    margin-left: auto;
+    width: ($w * 730);
+    font-size: ($w * 32);
+    line-height: 120.3%;
+    text-align: right;
+    color: rgba(73, 46, 24, 0.8);
+    margin-bottom: ($w * 75);
+  }
+
+  &__button {
+    display: flex;
+    justify-content: end;
+    margin-left: auto;
+
+    a {
+      position: relative;
+      max-width: ($w * 182);
+      width: 100%;
+
+      img {
+        width: 100%;
+      }
+
+      p {
+        position: absolute;
+        width: ($w * 290);
+        bottom: 0;
+        right: ($w * 65);
+        font-weight: 500;
+        font-size: ($w * 32);
+        line-height: 159.5%;
+        color: #492E18;
+      }
+    }
+  }
+}
+
+.subs {
+  margin-top: ($w * 150);
+
+  &__container {
+     max-width: ($w * 1252);
+     width: 100%;
+     margin: 0 auto;
+
+    h3 {
+      font-weight: 500;
+      font-size: ($w * 64);
+      line-height: 97.3%;
+      color: #492E18;
+    }
+  }
+
+  &__slider {
+    position: relative;
+    margin-top: ($w * 50);
+
+    &-item {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: ($w * 500);
+      height: ($w * 500);
+      padding: ($w * 32) ($w * 46);
+      background: linear-gradient(91.55deg, rgba(238, 221, 205, 0.5) 1.01%, rgba(255, 246, 237, 0.5) 98.45%);
+      box-shadow: ($w * 4) ($w * 4) ($w * 7) rgba(73, 46, 24, 0.2);
+      backdrop-filter: blur(2px);
+      border-radius: ($w * 30);
+
+      p {
+        font-weight: 400;
+        font-size: ($w * 24);
+        text-align: center;
+        line-height: 133.3%;
+        color: #492E18;
+      }
+    }
+
+    /* Слайдер */
+    .slick-slider{}
+    /* Слайдер запущен */
+    .slick-slider.slick-initialized{}
+    /* Слайдер с точками */
+    .slick-slider.slick-dotted{}
+    /* Ограничивающая оболочка */
+    .slick-list {
+      overflow: hidden;
+    }
+    /* Лента слайдов */
+    .slick-track{
+      display: flex;
+    }
+    /* Слайд */
+    .slick-slide{
+      margin-right: ($w * 15);
+    }
+    /* Слайд активный (показывается) */
+    .slick-slide.slick-active{}
+    /* Слайд основной */
+    .slick-slide.slick-current{}
+    /* Слайд по центру */
+    .slick-slide.slick-center{}
+    /* Клонированный слайд */
+    .slick-slide.slick-cloned{}
+    /* Стрелка */
+    .slick-arrow{
+      position: absolute;
+      top: ($w * -65);
+      right: 0;
+      font-size: 0;
+      width: ($w * 80);
+      height: ($w * 16);
+    }
+    /* Стрелка влево */
+    .slick-arrow.slick-prev{
+      transform: rotate(180deg);
+      background: url('../img/arrow-right.svg') center / contain no-repeat;
+      right: ($w * 200);
+    }
+    /* Стрелка вправо */
+    .slick-arrow.slick-next{
+      background: url('../img/arrow-right.svg') center / contain no-repeat;
+    }
+    /* Стрелка не активная */
+    .slick-arrow.slick-disabled{}
+    /* Точки (булиты) */
+    .slick-dots{}
+    .slick-dots li{}
+    /* Активная точка */
+    .slick-dots li.slick-active{}
+    /* Элемент точки */
+    .slick-dots li button{}
   }
 }
