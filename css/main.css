@@ -561,7 +561,7 @@ body::-webkit-scrollbar-track {
   line-height: 100.5%;
   text-align: center;
   color: #492E18;
-  border: 1px solid #CC3312;
+  border: 1 solid #CC3312;
   padding-top: 4.4973544974vw;
   padding-bottom: 4.4973544974vw;
 }
@@ -968,18 +968,33 @@ body::-webkit-scrollbar-track {
   margin-right: 4.2328042328vw;
   flex: 1;
 }
-.footer__top-menu ul {
+.footer__top-menu nav {
   display: flex;
   margin-bottom: 0;
 }
-.footer__top-menu ul li {
+.footer__top-menu nav a {
+  position: relative;
   font-weight: 400;
   font-size: 2.1164021164vw;
   line-height: 129%;
   color: #FFE6D1;
-}
-.footer__top-menu ul li:not(:last-child) {
   margin-right: 5.9523809524vw;
+}
+.footer__top-menu nav a:last-child {
+  margin-right: 0;
+}
+.footer__top-menu nav a:after {
+  display: block;
+  position: absolute;
+  left: 0; /*изменить на right:0;, чтобы изменить направление подчёркивания */
+  width: 0; /*задаём длинну линии до наведения курсора*/
+  height: 2px; /*задаём ширину линии*/
+  background-color: #FFE6D1; /*задаём цвет линии*/
+  content: "";
+  transition: width 0.3s ease-out; /*задаём время анимации*/
+}
+.footer__top-menu nav a:hover:after, .footer__top-menu nav a:focus:after {
+  width: 100%; /*устанавливаем значение 100% чтобы ссылка подчёркивалась полностью*/
 }
 .footer__bottom {
   display: flex;
@@ -994,4 +1009,143 @@ body::-webkit-scrollbar-track {
 
 .footer__main {
   background: #921A00;
+}
+
+.header__education {
+  background: #FFE9D8;
+}
+
+.main__edu {
+  background: linear-gradient(90deg, #FDFCFB 0%, #E2D1C3 100%);
+  overflow: hidden;
+}
+
+.edu {
+  background: url("../img/ed-bg.png") bottom/contain no-repeat;
+}
+.edu__container {
+  max-width: 82.8042328042vw;
+  width: 100%;
+  margin: 0 auto;
+}
+.edu__container h1 {
+  padding-top: 14.0211640212vw;
+  font-weight: 400;
+  font-size: 6.3492063492vw;
+  line-height: 97.3%;
+  color: #FFEEE0;
+  max-width: 60.8465608466vw;
+  width: 100%;
+}
+.edu__container h2 {
+  margin: 0 auto;
+  margin-top: 10.9126984127vw;
+  padding-bottom: 6.2830687831vw;
+  max-width: 49.6031746032vw;
+  width: 100%;
+  font-style: italic;
+  font-size: 3.1746031746vw;
+  line-height: 97.3%;
+  color: #FFEEE0;
+}
+
+.me {
+  padding-top: 6.6137566138vw;
+  padding-bottom: 6.6137566138vw;
+}
+.me__container {
+  max-width: 82.8042328042vw;
+  width: 100%;
+  margin: 0 auto;
+}
+.me h3 {
+  font-weight: 500;
+  font-size: 3.1746031746vw;
+  line-height: 97.3%;
+  color: #341E0B;
+  margin-bottom: 3.3068783069vw;
+}
+.me__wrapper {
+  display: flex;
+}
+.me__left {
+  max-width: 51.5873015873vw;
+  width: 100%;
+}
+.me__left ul li {
+  margin-left: 2.380952381vw;
+  font-size: 2.380952381vw;
+  line-height: 115%;
+  color: #492E18;
+  position: relative;
+}
+.me__left ul li::before {
+  content: "";
+  position: absolute;
+  top: 1.0582010582vw;
+  left: -1.6534391534vw;
+  display: flex;
+  width: 0.462962963vw;
+  height: 0.462962963vw;
+  border-radius: 50%;
+  background-color: rgb(73, 46, 24);
+}
+.me__left ul li span {
+  text-transform: uppercase;
+}
+.me__left ul div {
+  width: 97%;
+  margin-left: -1.1904761905vw;
+  border-bottom: 1px solid rgba(159, 29, 0, 0.5);
+  margin-top: 1.3227513228vw;
+  margin-bottom: 1.3227513228vw;
+}
+.me__right {
+  width: 29.3650793651vw;
+  margin-left: 1.3227513228vw;
+}
+.me__right div {
+  width: 41.9312169312vw;
+  height: 41.9312169312vw;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.me__right div img {
+  width: 100%;
+  margin-top: -1.0582010582vw;
+}
+
+.in {
+  padding-top: 4.8941798942vw;
+  background: linear-gradient(90deg, #271A0E 0%, rgba(149, 126, 108, 0.71) 100%);
+}
+.in__container {
+  max-width: 82.8042328042vw;
+  width: 100%;
+  margin: 0 auto;
+}
+.in h2 {
+  font-weight: 500;
+  font-size: 4.2328042328vw;
+  line-height: 97.3%;
+  color: #FFECDD;
+  margin-bottom: 5.291005291vw;
+}
+.in__list {
+  max-width: 58.5317460317vw;
+  width: 100%;
+}
+.in__list-show p {
+  font-weight: 400;
+  font-size: 2.380952381vw;
+  line-height: 120.3%;
+  color: rgba(255, 236, 221, 0.8);
+  width: 100%;
+  padding: 1.3227513228vw 1.3227513228vw 2.6455026455vw;
+  background: linear-gradient(178.91deg, rgba(0, 0, 0, 0.1) 0.93%, rgba(0, 0, 0, 0) 144.63%);
+  filter: drop-shadow(0px 5px 10px rgba(0, 0, 0, 0.19));
+  -webkit-backdrop-filter: blur(4px);
+          backdrop-filter: blur(4px);
+  border-radius: 30px;
+  border: linear-gradient(178.91deg, rgba(0, 0, 0, 0.1) 0.93%, rgba(0, 0, 0, 0) 144.63%);
 }

@@ -434,7 +434,7 @@ body::-webkit-scrollbar-track {
       line-height: 100.5%;
       text-align: center;
       color: #492E18;
-      border: 1px solid #CC3312;
+      border: 1  solid #CC3312;
       padding-top: ($w * 68);
       padding-bottom: ($w * 68);
     }
@@ -917,18 +917,36 @@ body::-webkit-scrollbar-track {
       margin-right: ($w * 64);
       flex: 1;
 
-      ul {
+      nav {
         display: flex;
         margin-bottom: 0;
-  
-        li {
+          
+        a {
+          position: relative;
           font-weight: 400;
           font-size: ($w * 32);
           line-height: 129%;          
           color: #FFE6D1;
-
-          &:not(:last-child) {
-            margin-right: ($w * 90);
+          margin-right: ($w * 90);
+          
+          &:last-child {
+            margin-right: 0;
+          }
+    
+          &:after {
+            display: block;
+            position: absolute;
+            left: 0; /*изменить на right:0;, чтобы изменить направление подчёркивания */
+            width: 0;/*задаём длинну линии до наведения курсора*/
+            height: 2px; /*задаём ширину линии*/
+            background-color: #FFE6D1; /*задаём цвет линии*/
+            content: "";
+            transition: width 0.3s ease-out; /*задаём время анимации*/
+          }
+          
+          &:hover:after,
+          &:focus:after {
+            width: 100%; /*устанавливаем значение 100% чтобы ссылка подчёркивалась полностью*/
           }
         }
       }
@@ -951,4 +969,167 @@ body::-webkit-scrollbar-track {
 
 .footer__main {
   background: #921A00;
+}
+
+// education
+.header__education {
+  background: #FFE9D8;
+}
+
+.main__edu {
+  background: linear-gradient(90deg, #FDFCFB 0%, #E2D1C3 100%);
+  overflow: hidden;
+}
+
+.edu {
+  background: url("../img/ed-bg.png") bottom / contain no-repeat;
+
+  &__container {
+    max-width: ($w * 1252);
+    width: 100%;
+    margin: 0 auto;
+
+    h1 {
+      padding-top: ($w * 212);
+      font-weight: 400;
+      font-size: ($w * 96);
+      line-height: 97.3%;
+      color: #FFEEE0;
+      max-width: ($w * 920);
+      width: 100%;
+    }
+
+    h2 {
+      margin: 0 auto;
+      margin-top: ($w * 165);
+      padding-bottom: ($w * 95);
+      max-width: ($w * 750);
+      width: 100%;
+      font-style: italic;
+      font-size: ($w * 48);
+      line-height: 97.3%;
+      color: #FFEEE0;
+    }
+  }
+}
+
+.me {
+  padding-top: ($w * 100);
+  padding-bottom: ($w * 100);
+
+  &__container {
+    max-width: ($w * 1252);
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  h3 {
+    font-weight: 500;
+    font-size: ($w * 48);
+    line-height: 97.3%;
+    color: #341E0B;
+    margin-bottom: ($w * 50);
+  }
+
+  &__wrapper {
+    display: flex;
+  }
+
+  &__left {
+    max-width: ($w * 780);
+    width: 100%;
+
+    ul {
+
+      li {
+        margin-left: ($w * 36);
+        font-size: ($w * 36);
+        line-height: 115%;
+        color: #492E18;
+        position: relative;
+
+        &::before {
+          content: '';
+          position: absolute;
+          top: ($w * 16);
+          left: ($w * -25);
+          display: flex;
+          width: ($w * 7);
+          height: ($w * 7);
+          border-radius: 50%;
+          background-color: rgba(73, 46, 24, 1);
+        }
+
+        span {
+          text-transform: uppercase;
+        }
+      }
+  
+      div {
+        width: 97%;
+        margin-left: ($w * -18);
+        border-bottom: 1px solid rgba(159, 29, 0, 0.5);
+        margin-top: ($w * 20);
+        margin-bottom: ($w * 20);
+      }
+    }
+  }
+
+  &__right {
+    width: ($w * 444);
+    margin-left: ($w * 20);
+
+    div {
+      width: ($w * 634);
+      height: ($w * 634);
+      border-radius: 50%;
+      overflow: hidden;
+
+      img {
+        width: 100%;
+        margin-top: ($w * -16);
+      }
+    }
+  }
+}
+
+.in {
+  padding-top: ($w * 74);
+  background: linear-gradient(90deg, #271A0E 0%, rgba(149, 126, 108, 0.71) 100%);
+
+  &__container {
+    max-width: ($w * 1252);
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  h2 {
+    font-weight: 500;
+    font-size: ($w * 64);
+    line-height: 97.3%;
+    color: #FFECDD;
+    margin-bottom: ($w * 80);
+  }
+
+  &__list {
+    max-width: ($w * 885);
+    width: 100%;
+
+    &-show {
+
+      p {
+        font-weight: 400;
+        font-size: ($w * 36);
+        line-height: 120.3%;
+        color: rgba(255, 236, 221, 0.8);
+        width: 100%;
+        padding: ($w * 20) ($w * 20) ($w * 40);
+        background: linear-gradient(178.91deg, rgba(0, 0, 0, 0.1) 0.93%, rgba(0, 0, 0, 0) 144.63%);
+        filter: drop-shadow(0px 5px 10px rgba(0, 0, 0, 0.19));
+        backdrop-filter: blur(4px);
+        border-radius: 30px;
+        border:linear-gradient(178.91deg, rgba(0, 0, 0, 0.1) 0.93%, rgba(0, 0, 0, 0) 144.63%);
+      }
+    }
+  }
 }
