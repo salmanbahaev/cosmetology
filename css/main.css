@@ -233,7 +233,7 @@ body::-webkit-scrollbar {
 
 body::-webkit-scrollbar-thumb {
   border-radius: 10px;
-  background-color: #E2D1C3;
+  background-color: #b69d89;
 }
 
 body::-webkit-scrollbar-track {
@@ -261,6 +261,8 @@ body::-webkit-scrollbar-track {
 }
 .header__menu {
   margin-left: 7.208994709vw;
+  display: flex;
+  align-items: center;
 }
 .header__menu a {
   position: relative;
@@ -414,6 +416,7 @@ body::-webkit-scrollbar-track {
   line-height: 159.5%;
   color: #492E18;
   width: 14.5502645503vw;
+  margin-bottom: 0;
 }
 .dr__right ul > li, .dr__right p {
   font-style: normal;
@@ -605,6 +608,7 @@ body::-webkit-scrollbar-track {
   font-size: 2.1164021164vw;
   line-height: 159.5%;
   color: #492E18;
+  margin-bottom: 0;
 }
 
 .subs {
@@ -1416,6 +1420,7 @@ body::-webkit-scrollbar-track {
 
 .service {
   padding-top: 6.0185185185vw;
+  padding-bottom: 6.6137566138vw;
 }
 .service__container {
   max-width: 82.8042328042vw;
@@ -1458,23 +1463,118 @@ body::-webkit-scrollbar-track {
   border-radius: 0;
 }
 .service .accordion .card {
-  border-bottom: 0.0661375661vw solid #CC3312;
+  border-top: 1px solid #CC3312;
+  padding: 6.6137566138vw 0;
 }
-.service .accordion .card:last-child {
-  border-bottom: none;
+.service .accordion .card:first-child {
+  border-top: none;
 }
 .service .accordion .card-header {
   padding: 0;
+}
+.service .accordion .card-body {
+  padding: 0;
+  padding-top: 3.3068783069vw;
+}
+.service .accordion .card-body li {
+  display: flex;
+  justify-content: space-between;
+}
+.service .accordion .card-body li p {
+  margin-bottom: 1.9841269841vw;
+}
+.service .accordion .card-body li p:first-child {
+  font-size: 3.1746031746vw;
+  line-height: 107.5%;
+  color: #492E18;
+}
+.service .accordion .card-body li p:first-child span {
+  font-size: 2.6455026455vw;
+  color: rgba(73, 46, 24, 0.8);
+}
+.service .accordion .card-body li p:last-child {
+  width: 33.8624338624vw;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 3.0423280423vw;
+  line-height: 107.5%;
+  color: #492E18;
+}
+.service .accordion .card-body li:last-child p {
+  margin-bottom: 0;
 }
 .service .accordion .accordion .card-header button {
   position: relative;
 }
 .service .accordion .btn-link {
   text-decoration: none;
+  padding: 0;
 }
 .service .accordion .btn.focus, .service .accordion .btn:focus {
   outline: 0;
   box-shadow: none;
+}
+.service__accord {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.service__accord h3 {
+  font-size: 3.1746031746vw;
+  font-weight: 500;
+  line-height: 97.3%;
+  color: #492E18;
+  margin-bottom: 0;
+}
+.service__accord-wrap {
+  position: relative;
+  width: 33.8624338624vw;
+}
+.service__accord-wrap-text {
+  font-style: italic;
+  font-weight: 400;
+  font-size: 3.1746031746vw;
+  line-height: 97.3%;
+  color: #492E18;
+  margin-bottom: 0;
+}
+.service__accord-arrow {
+  width: 7.2751322751vw;
+  height: 1.455026455vw;
+  position: absolute;
+  right: 0;
+  top: 0.6613756614vw;
+  transition: all 0.3s ease 0s;
+}
+.service__accord-arrow img {
+  width: 100%;
+}
+.service .accordion button:not(.collapsed) .service__accord-arrow {
+  transform: rotate(90deg);
+  transition: all 0.3s ease 0s;
+  top: 2.6455026455vw;
+  right: -2.3148148148vw;
+}
+.service__btn {
+  display: flex;
+  justify-content: end;
+}
+.service__btn a {
+  position: relative;
+  max-width: 17.1957671958vw;
+  width: 100%;
+}
+.service__btn a img {
+  width: 100%;
+}
+.service__btn a span {
+  position: absolute;
+  bottom: 0vw;
+  left: -7.2751322751vw;
+  font-weight: 500;
+  font-size: 3.1746031746vw;
+  line-height: 159.5%;
+  color: #492E18;
 }
 
 .footer__services {
