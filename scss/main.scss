@@ -1,7 +1,7 @@
 @import 'null';
 @import 'fonts';
 
-$w: (100vw / 1512);
+$w: (100vw / 2100);
 
 .call__button {
   width: 100%;
@@ -64,13 +64,19 @@ body::-webkit-scrollbar-track {
 .header {
   position: fixed;
   z-index: 10000;
-  display: flex;
-  align-items: center;
   width: 100%;
   top: 0;
   left: 0;
   background: rgba(12, 12, 12, 0.1);
-  padding: ($w * 20) ($w * 130);
+  
+  &__container {
+    padding: ($w * 20) 0;
+    max-width: ($w * 1310);
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+  }
 
   &__logo {
     width: ($w * 237);
@@ -134,6 +140,13 @@ body::-webkit-scrollbar-track {
 .inject {
   display: flex;
 
+  &__container {
+    display: flex;
+    max-width: ($w * 1520);
+    width: 100%;
+    margin: 0 auto;
+  }
+
   &__info {
     display: flex;
     flex-direction: column;
@@ -149,7 +162,7 @@ body::-webkit-scrollbar-track {
   &__info-wrapper {
     display: flex;
     flex-direction: column;
-    margin-left: ($w * 123);
+    padding-left: ($w * 98);
     margin-right: ($w * 22);
 
     p {
@@ -174,7 +187,6 @@ body::-webkit-scrollbar-track {
   }
 
   &__photo {
-    min-width: ($w * 695);
     margin-left: auto;
 
     img {
@@ -189,7 +201,7 @@ body::-webkit-scrollbar-track {
   &__container {
     max-width: ($w * 1310);
     width: 100%;
-    margin-left: ($w * 130);
+    margin: 0 auto;
     display: flex;
   }
 
@@ -366,7 +378,7 @@ body::-webkit-scrollbar-track {
     a {
       position: absolute;
       left: ($w * -126);
-      bottom: ($w * -66);
+      bottom: ($w * -60);
       display: flex;
       margin-top: ($w * 120);
       max-width: ($w * 182);
@@ -379,10 +391,11 @@ body::-webkit-scrollbar-track {
 
       p {
         position: absolute;
+        margin-bottom: ($w * -3);
         bottom: 0;
         right: ($w * 72);
         font-weight: 500;
-        font-size: ($w * 28);
+        font-size: ($w * 32);
         line-height: 159.5%;
         color: #492E18;
       }
@@ -437,7 +450,7 @@ body::-webkit-scrollbar-track {
       line-height: 100.5%;
       text-align: center;
       color: #492E18;
-      border: 1  solid #CC3312;
+      border: 1px solid #CC3312;
       padding-top: ($w * 68);
       padding-bottom: ($w * 68);
     }
@@ -591,6 +604,13 @@ body::-webkit-scrollbar-track {
 }
 
 .gallery {
+
+  &__container {
+    
+    max-width: ($w * 1512);
+    width: 100%;
+    margin: 0 auto;
+  }
   
   &__wrapper {
     margin-top: ($w * 150);
