@@ -671,6 +671,7 @@ body::-webkit-scrollbar-track {
   border-radius: 1.4285714286vw;
 }
 .subs__slider-item p {
+  margin-bottom: 0;
   font-weight: 400;
   font-size: 1.1428571429vw;
   text-align: center;

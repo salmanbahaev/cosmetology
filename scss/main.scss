@@ -538,6 +538,7 @@ body::-webkit-scrollbar-track {
       border-radius: ($w * 30);
 
       p {
+        margin-bottom: 0;
         font-weight: 400;
         font-size: ($w * 24);
         text-align: center;
