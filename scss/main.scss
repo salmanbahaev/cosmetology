@@ -344,23 +344,35 @@ body::-webkit-scrollbar-track {
       justify-content: center;
 
       li {
-        position: relative;
         text-align: right;
         margin-bottom: ($w * 48);
-        font-size: ($w * 32);
-        line-height: 97.3%;
-        color: #492E18;
-        padding-right: ($w * 71);
 
-        &::before {
-          position: absolute;
-          top: ($w * -10);
-          right: 0;
-          content: '';
-          display: inline-block;
-          width: ($w * 45);
-          height: ($w * 45);
-          background: url('../img/arrow_3.svg') center / contain no-repeat;
+        a {
+          padding-right: ($w * 71);
+          position: relative;
+          font-size: ($w * 32);
+          line-height: 97.3%;
+          color: #492E18;
+
+          &::before {
+            position: absolute;
+            top: ($w * -10);
+            right: 0;
+            content: '';
+            display: inline-block;
+            width: ($w * 45);
+            height: ($w * 45);
+            background: url('../img/arrow_3.svg') center / contain no-repeat;
+            transition: all .2s ease 0s;
+          }
+
+          &:hover {
+           
+            &::before {
+              transform: rotate(45deg);
+              top: ($w * -3);
+            }
+          }
         }
       }
     }

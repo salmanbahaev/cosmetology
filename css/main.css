@@ -486,15 +486,17 @@ body::-webkit-scrollbar-track {
   justify-content: center;
 }
 .services__left ul li {
-  position: relative;
   text-align: right;
   margin-bottom: 2.2857142857vw;
+}
+.services__left ul li a {
+  padding-right: 3.380952381vw;
+  position: relative;
   font-size: 1.5238095238vw;
   line-height: 97.3%;
   color: #492E18;
-  padding-right: 3.380952381vw;
 }
-.services__left ul li::before {
+.services__left ul li a::before {
   position: absolute;
   top: -0.4761904762vw;
   right: 0;
@@ -503,6 +505,11 @@ body::-webkit-scrollbar-track {
   width: 2.1428571429vw;
   height: 2.1428571429vw;
   background: url("../img/arrow_3.svg") center/contain no-repeat;
+  transition: all 0.2s ease 0s;
+}
+.services__left ul li a:hover::before {
+  transform: rotate(45deg);
+  top: -0.1428571429vw;
 }
 .services__right {
   max-width: 29.3333333333vw;
