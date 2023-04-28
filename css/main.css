@@ -711,6 +711,8 @@ body::-webkit-scrollbar-track {
   background: url("../img/arrow-right.svg") center/contain no-repeat;
 }
 .gallery__container {
+  display: flex;
+  flex-direction: column;
   max-width: 72vw;
   width: 100%;
   margin: 0 auto;
@@ -791,12 +793,11 @@ body::-webkit-scrollbar-track {
 .gallery__btn {
   margin-top: 2.380952381vw;
   margin-right: 7.4761904762vw;
-  display: flex;
-  justify-content: end;
   margin-left: auto;
   position: relative;
 }
-.gallery__btn a {
+.gallery__btn span {
+  display: inline-block;
   font-weight: 700;
   font-size: 1.7142857143vw;
   line-height: 160%;
@@ -808,6 +809,11 @@ body::-webkit-scrollbar-track {
   width: 8.0476190476vw;
   right: -1.2857142857vw;
   bottom: -0.2380952381vw;
+  transition: all 0.3s ease 0s;
+}
+.gallery__btn:hover img {
+  right: -2.8571428571vw;
+  transform: scaleY(1.15);
 }
 
 .ques {

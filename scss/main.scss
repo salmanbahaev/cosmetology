@@ -619,7 +619,8 @@ body::-webkit-scrollbar-track {
 .gallery {
 
   &__container {
-    
+    display: flex;
+    flex-direction: column;
     max-width: ($w * 1512);
     width: 100%;
     margin: 0 auto;
@@ -724,12 +725,11 @@ body::-webkit-scrollbar-track {
   &__btn {
     margin-top: ($w * 50);
     margin-right: ($w * 157);
-    display: flex;
-    justify-content: end;
     margin-left: auto;
     position: relative;
 
-    a {
+    span {
+      display: inline-block;
       font-weight: 700;
       font-size: ($w * 36);
       line-height: 160%;
@@ -742,6 +742,15 @@ body::-webkit-scrollbar-track {
       width: ($w * 169);
       right: ($w * -27);
       bottom: ($w * -5);
+      transition: all .3s ease 0s;
+    }
+
+    &:hover {
+
+      img {
+        right: ($w * -60);
+        transform: scaleY(1.15);
+      }
     }
   }
 }
