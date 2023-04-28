@@ -420,12 +420,12 @@ body::-webkit-scrollbar-track {
 .dr__right-list a p {
   position: absolute;
   bottom: 0;
-  right: 3.1428571429vw;
+  right: 1.1904761905vw;
   font-weight: 500;
   font-size: 1.3333333333vw;
   line-height: 159.5%;
   color: #492E18;
-  width: 13.3333333333vw;
+  width: 12.380952381vw;
   margin-bottom: 0;
 }
 .dr__right ul > li, .dr__right p {

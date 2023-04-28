@@ -266,12 +266,12 @@ body::-webkit-scrollbar-track {
         p {
           position: absolute;
           bottom: 0;
-          right: ($w * 66);
+          right: ($w * 25);
           font-weight: 500;
           font-size: ($w * 28);
           line-height: 159.5%;
           color: #492E18;
-          width: ($w * 280);
+          width: ($w * 260);
           margin-bottom: 0;
         }
       }
