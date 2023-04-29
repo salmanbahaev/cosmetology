@@ -1228,6 +1228,7 @@ body::-webkit-scrollbar-track {
   padding: 0.9523809524vw 0.9523809524vw 1.9047619048vw;
   padding-left: 3.3333333333vw;
   box-shadow: 0px 0.2380952381vw 0.4761904762vw rgba(0, 0, 0, 0.19);
+  -webkit-transform: translate3d(0, 0, 0);
 }
 .in__list-show p::after {
   content: "";
