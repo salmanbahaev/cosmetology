@@ -1228,7 +1228,7 @@ body::-webkit-scrollbar-track {
   padding: 0.9523809524vw 0.9523809524vw 1.9047619048vw;
   padding-left: 3.3333333333vw;
   box-shadow: 0px 0.2380952381vw 0.4761904762vw rgba(0, 0, 0, 0.19);
-  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
 }
 .in__list-show p::after {
   content: "";
@@ -1254,7 +1254,7 @@ body::-webkit-scrollbar-track {
   -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   -webkit-mask-composite: destination-out;
   mask-composite: exclude;
-  -webkit-transform: translate3d(0, 0, 100px);
+  transform: translate3d(0, 0, 100px);
 }
 .in__list-show p:nth-child(2) {
   z-index: 10;

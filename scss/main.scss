@@ -1223,7 +1223,7 @@ body::-webkit-scrollbar-track {
         padding: ($w * 20) ($w * 20) ($w * 40);
         padding-left: ($w * 70);
         box-shadow: 0px ($w * 5) ($w * 10) rgba(0, 0, 0, 0.19);
-        -webkit-transform: translate3d(0,0,0);
+        transform: translate3d(0,0,0);
 
         &::after {
           content: '';
@@ -1252,7 +1252,7 @@ body::-webkit-scrollbar-track {
              linear-gradient(#fff 0 0);
           -webkit-mask-composite: destination-out; 
           mask-composite: exclude;
-          -webkit-transform: translate3d(0,0,100px);
+          transform: translate3d(0,0,100px);
         }
 
         &:nth-child(2) { z-index: 10; transform: translate3d(0, 0, 200px);}
