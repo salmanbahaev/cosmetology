@@ -1210,6 +1210,10 @@ body::-webkit-scrollbar-track {
   max-width: 42.1428571429vw;
   width: 100%;
 }
+.in__list-show {
+  position: relative;
+  z-index: 1;
+}
 .in__list-show p {
   position: relative;
   margin-top: -0.4761904762vw;

@@ -1206,6 +1206,9 @@ body::-webkit-scrollbar-track {
     width: 100%;
 
     &-show {
+      position: relative;
+      z-index: 1;
+
       p {
         position: relative;
         margin-top: ($w * -10);
