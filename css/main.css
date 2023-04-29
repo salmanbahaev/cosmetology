@@ -1257,45 +1257,59 @@ body::-webkit-scrollbar-track {
 }
 .in__list-show p:nth-child(2) {
   z-index: 10;
+  transform: translate3d(0, 0, 200px);
 }
 .in__list-show p:nth-child(3) {
   z-index: 20;
+  transform: translate3d(0, 0, 300px);
 }
 .in__list-show p:nth-child(4) {
   z-index: 30;
+  transform: translate3d(0, 0, 400px);
 }
 .in__list-show p:nth-child(5) {
   z-index: 40;
+  transform: translate3d(0, 0, 500px);
 }
 .in__list-show p:nth-child(6) {
   z-index: 50;
+  transform: translate3d(0, 0, 600px);
 }
 .in__list-show p:nth-child(7) {
   z-index: 60;
+  transform: translate3d(0, 0, 700px);
 }
 .in__list-show p:nth-child(8) {
   z-index: 70;
+  transform: translate3d(0, 0, 800px);
 }
 .in__list-show p:nth-child(9) {
   z-index: 80;
+  transform: translate3d(0, 0, 900px);
 }
 .in__list-show p:nth-child(10) {
   z-index: 90;
+  transform: translate3d(0, 0, 1000px);
 }
 .in__list-show p:nth-child(11) {
   z-index: 100;
+  transform: translate3d(0, 0, 1100px);
 }
 .in__list-show p:nth-child(12) {
   z-index: 110;
+  transform: translate3d(0, 0, 1200px);
 }
 .in__list-show p:nth-child(13) {
   z-index: 120;
+  transform: translate3d(0, 0, 1300px);
 }
 .in__list-show p:nth-child(14) {
   z-index: 130;
+  transform: translate3d(0, 0, 1400px);
 }
 .in__list-show p:nth-child(15) {
   z-index: 140;
+  transform: translate3d(0, 0, 1500px);
 }
 .in__list-show .in__showed {
   position: relative;
