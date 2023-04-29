@@ -147,7 +147,7 @@ body::-webkit-scrollbar-track {
       transition: all .3s ease 0s;
 
       &:hover {
-        fill:red;
+        fill:rgb(204, 51, 18);
         transition: all .3s ease 0s;
       }
     }
@@ -190,15 +190,26 @@ body::-webkit-scrollbar-track {
       color: rgba(95, 61, 33, 0.8);
     }
 
-    & > div {
+    & > a {
       margin-top: ($w * -7);
       margin-right: ($w * 20);
       margin-left: auto;
       max-width: ($w * 262);
       width: 100%;
+      height: ($w * 262);
+      border: 1px solid #492E18;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: all .3s ease 0s;
 
       img {
-        width: 100%;
+        width: 60%;
+      }
+
+      &:hover {
+        transform: rotate(-45deg);
       }
     }
   }
@@ -271,13 +282,27 @@ body::-webkit-scrollbar-track {
       a {
         position: relative;
         display: flex;
+        justify-content: center;
+        align-items: center;
         margin-left: auto;
         margin-top: ($w * 120);
         max-width: ($w * 182);
         width: 100%;
+        height: ($w * 182);
+        transition: all .3s ease 0s;
+        border-radius: 50%;
+        border: 2px solid #492E18;
   
         img {
-          width: 100%;
+          width: 45%;
+          transition: all .3s ease 0s;
+        }
+
+        &:hover {
+
+          img {
+            transform: rotate(-45deg);
+          }
         }
   
         p {
@@ -406,16 +431,28 @@ body::-webkit-scrollbar-track {
 
     a {
       position: absolute;
-      left: ($w * -126);
-      bottom: ($w * -60);
+      left: ($w * -140);
+      bottom: ($w * -65);
       display: flex;
+      justify-content: center;
+      align-items: center;
       margin-top: ($w * 120);
       max-width: ($w * 182);
       width: 100%;
+      height: ($w * 182);
       margin-left: auto;
+      border-radius: 50%;
+      border: 2px solid #492E18;
 
       img {
-        width: 100%;
+        width: 50%;
+        transition: all .3s ease 0s;
+      }
+
+      &:hover {
+        img {
+          transform: rotate(-46deg);
+        }
       }
 
       p {
@@ -513,10 +550,23 @@ body::-webkit-scrollbar-track {
     a {
       position: relative;
       max-width: ($w * 182);
+      height: ($w * 182);
       width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50%;
+      border: 2px solid #492E18;
 
       img {
-        width: 100%;
+        width: 48%;
+        transition: all .3s ease 0s;
+      }
+
+      &:hover {
+        img {
+          transform: rotate(-46deg);
+        }
       }
 
       p {
@@ -862,16 +912,16 @@ body::-webkit-scrollbar-track {
   padding-bottom: ($w * 250);
 
   &__container {
-    max-width: ($w * 1252);
+    max-width: ($w * 1100);
     width: 100%;
     margin: 0 auto;
 
     h3 {
       font-weight: 500;
-      font-size: ($w * 48);
-      line-height: ($w * 59);
+      font-size: ($w * 42);
+      line-height: ($w * 50);
       color: #492E18;
-      margin-bottom: ($w * 100);
+      margin-bottom: ($w * 60);
     }
 
     .call__form {
@@ -885,9 +935,9 @@ body::-webkit-scrollbar-track {
         textarea {
           color: rgba(159, 29, 0, 1);
           border: 1px solid #492E18;
-          padding: ($w * 35) ($w * 40);
+          padding: ($w * 25) ($w * 30);
           font-weight: 400;
-          font-size: ($w * 32);
+          font-size: ($w * 30);
           line-height: 129%;
           width: 100%;
           background-color: transparent;
@@ -902,8 +952,8 @@ body::-webkit-scrollbar-track {
       .call__comments {
 
         textarea {
-          height: ($w * 240);
-          margin-bottom: ($w * 100);
+          height: ($w * 200);
+          margin-bottom: ($w * 70);
   
           &::placeholder {
             color: rgba(159, 29, 0, 0.7);
@@ -1447,10 +1497,23 @@ body::-webkit-scrollbar-track {
       margin-right: ($w * 122);
       position: relative;
       max-width: ($w * 192);
+      height: ($w * 192);
       width: 100%;
-      
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50%;
+      border: 2px solid #492E18;
+
       img {
-        width: 100%;
+        width: 45%;
+        transition: all .3s ease 0s;
+      }
+
+      &:hover {
+        img {
+          transform: rotate(-45deg);
+        }
       }
 
       span {

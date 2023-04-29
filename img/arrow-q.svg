@@ -1,6 +1,5 @@
-<svg width="192" height="192" viewBox="0 0 192 192" fill="none" xmlns="http://www.w3.org/2000/svg">
-<line y1="-1.5" x2="59.4639" y2="-1.5" transform="matrix(0.680142 0.727594 -0.685659 0.733496 72.4993 78.3359)" stroke="#CC3312" stroke-width="3"/>
-<line x1="113.395" y1="75.1699" x2="113.395" y2="120.533" stroke="#CC3312" stroke-width="3"/>
-<line x1="115.05" y1="119.934" x2="72.6461" y2="119.934" stroke="#CC3312" stroke-width="3"/>
-<circle cx="96" cy="96" r="95" stroke="#492E18" stroke-width="2"/>
+<svg width="80" height="86" viewBox="0 0 80 86" fill="none" xmlns="http://www.w3.org/2000/svg">
+<line y1="-1.5" x2="59.4639" y2="-1.5" transform="matrix(0.680142 0.727594 -0.685659 0.733496 18.4993 22.3359)" stroke="#CC3312" stroke-width="3"/>
+<line x1="59.3949" y1="19.1699" x2="59.3949" y2="64.5325" stroke="#CC3312" stroke-width="3"/>
+<line x1="61.0503" y1="63.9337" x2="18.6461" y2="63.9337" stroke="#CC3312" stroke-width="3"/>
 </svg>

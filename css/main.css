@@ -318,7 +318,7 @@ body::-webkit-scrollbar-track {
   transition: all 0.3s ease 0s;
 }
 .header__inst svg:hover {
-  fill: red;
+  fill: rgb(204, 51, 18);
   transition: all 0.3s ease 0s;
 }
 
@@ -354,15 +354,25 @@ body::-webkit-scrollbar-track {
   font-size: 1.3333333333vw;
   color: rgba(95, 61, 33, 0.8);
 }
-.inject__info-wrapper > div {
+.inject__info-wrapper > a {
   margin-top: -0.3333333333vw;
   margin-right: 0.9523809524vw;
   margin-left: auto;
   max-width: 12.4761904762vw;
   width: 100%;
+  height: 12.4761904762vw;
+  border: 1px solid #492E18;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease 0s;
 }
-.inject__info-wrapper > div img {
-  width: 100%;
+.inject__info-wrapper > a img {
+  width: 60%;
+}
+.inject__info-wrapper > a:hover {
+  transform: rotate(-45deg);
 }
 .inject__photo {
   margin-left: auto;
@@ -424,13 +434,23 @@ body::-webkit-scrollbar-track {
 .dr__right-list a {
   position: relative;
   display: flex;
+  justify-content: center;
+  align-items: center;
   margin-left: auto;
   margin-top: 5.7142857143vw;
   max-width: 8.6666666667vw;
   width: 100%;
+  height: 8.6666666667vw;
+  transition: all 0.3s ease 0s;
+  border-radius: 50%;
+  border: 2px solid #492E18;
 }
 .dr__right-list a img {
-  width: 100%;
+  width: 45%;
+  transition: all 0.3s ease 0s;
+}
+.dr__right-list a:hover img {
+  transform: rotate(-45deg);
 }
 .dr__right-list a p {
   position: absolute;
@@ -536,16 +556,25 @@ body::-webkit-scrollbar-track {
 }
 .services__right a {
   position: absolute;
-  left: -6vw;
-  bottom: -2.8571428571vw;
+  left: -6.6666666667vw;
+  bottom: -3.0952380952vw;
   display: flex;
+  justify-content: center;
+  align-items: center;
   margin-top: 5.7142857143vw;
   max-width: 8.6666666667vw;
   width: 100%;
+  height: 8.6666666667vw;
   margin-left: auto;
+  border-radius: 50%;
+  border: 2px solid #492E18;
 }
 .services__right a img {
-  width: 100%;
+  width: 50%;
+  transition: all 0.3s ease 0s;
+}
+.services__right a:hover img {
+  transform: rotate(-46deg);
 }
 .services__right a p {
   position: absolute;
@@ -627,10 +656,20 @@ body::-webkit-scrollbar-track {
 .learn__button a {
   position: relative;
   max-width: 8.6666666667vw;
+  height: 8.6666666667vw;
   width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  border: 2px solid #492E18;
 }
 .learn__button a img {
-  width: 100%;
+  width: 48%;
+  transition: all 0.3s ease 0s;
+}
+.learn__button a:hover img {
+  transform: rotate(-46deg);
 }
 .learn__button a p {
   position: absolute;
@@ -907,16 +946,16 @@ body::-webkit-scrollbar-track {
   padding-bottom: 11.9047619048vw;
 }
 .call__container {
-  max-width: 59.619047619vw;
+  max-width: 52.380952381vw;
   width: 100%;
   margin: 0 auto;
 }
 .call__container h3 {
   font-weight: 500;
-  font-size: 2.2857142857vw;
-  line-height: 2.8095238095vw;
+  font-size: 2vw;
+  line-height: 2.380952381vw;
   color: #492E18;
-  margin-bottom: 4.7619047619vw;
+  margin-bottom: 2.8571428571vw;
 }
 .call__container .call__form {
   width: 100%;
@@ -931,9 +970,9 @@ body::-webkit-scrollbar-track {
 .call__container .call__form .call__comments textarea {
   color: rgb(159, 29, 0);
   border: 1px solid #492E18;
-  padding: 1.6666666667vw 1.9047619048vw;
+  padding: 1.1904761905vw 1.4285714286vw;
   font-weight: 400;
-  font-size: 1.5238095238vw;
+  font-size: 1.4285714286vw;
   line-height: 129%;
   width: 100%;
   background-color: transparent;
@@ -949,8 +988,8 @@ body::-webkit-scrollbar-track {
   color: rgba(159, 29, 0, 0.7);
 }
 .call__container .call__form .call__comments textarea {
-  height: 11.4285714286vw;
-  margin-bottom: 4.7619047619vw;
+  height: 9.5238095238vw;
+  margin-bottom: 3.3333333333vw;
 }
 .call__container .call__form .call__comments textarea::-moz-placeholder {
   color: rgba(159, 29, 0, 0.7);
@@ -1456,10 +1495,20 @@ body::-webkit-scrollbar-track {
   margin-right: 5.8095238095vw;
   position: relative;
   max-width: 9.1428571429vw;
+  height: 9.1428571429vw;
   width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  border: 2px solid #492E18;
 }
 .ques2__ty a img {
-  width: 100%;
+  width: 45%;
+  transition: all 0.3s ease 0s;
+}
+.ques2__ty a:hover img {
+  transform: rotate(-45deg);
 }
 .ques2__ty a span {
   position: absolute;

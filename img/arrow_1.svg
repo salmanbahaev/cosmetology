@@ -1,6 +1,5 @@
-<svg width="262" height="262" viewBox="0 0 262 262" fill="none" xmlns="http://www.w3.org/2000/svg">
-<circle cx="131" cy="131" r="130.5" stroke="#492E18"/>
-<line x1="96.0166" y1="93.2831" x2="178.041" y2="175.307" stroke="#CC3312" stroke-opacity="0.7" stroke-width="3"/>
-<line x1="176.456" y1="88.3438" x2="176.456" y2="174.344" stroke="#CC3312" stroke-opacity="0.7" stroke-width="3"/>
-<line x1="176.956" y1="173.844" x2="90.9558" y2="173.844" stroke="#CC3312" stroke-opacity="0.7" stroke-width="3"/>
+<svg width="166" height="166" viewBox="0 0 166 166" fill="none" xmlns="http://www.w3.org/2000/svg">
+<line x1="42.0166" y1="41.2831" x2="124.041" y2="123.307" stroke="#CC3312" stroke-opacity="0.7" stroke-width="3"/>
+<line x1="122.456" y1="36.3438" x2="122.456" y2="122.344" stroke="#CC3312" stroke-opacity="0.7" stroke-width="3"/>
+<line x1="122.956" y1="121.844" x2="36.9558" y2="121.844" stroke="#CC3312" stroke-opacity="0.7" stroke-width="3"/>
 </svg>
