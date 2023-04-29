@@ -7,8 +7,6 @@ $(document).ready(function(){
     variableWidth: true,
   });
 
-  $("#phone").mask("+7 (999) 999-99-99");
-
   $(".slide-toggle").click(function(){ 
     $(".in__showed").slideToggle(); 
 

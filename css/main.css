@@ -277,6 +277,7 @@ body::-webkit-scrollbar-track {
   line-height: 97.3%;
   color: #341E0B;
   margin-right: 4.2857142857vw;
+  transition: all 0.3s ease 0s;
 }
 .header__menu a:last-child {
   margin-right: 0;
@@ -287,9 +288,12 @@ body::-webkit-scrollbar-track {
   left: 0; /*изменить на right:0;, чтобы изменить направление подчёркивания */
   width: 0; /*задаём длинну линии до наведения курсора*/
   height: 2px; /*задаём ширину линии*/
-  background-color: #341E0B; /*задаём цвет линии*/
+  background-color: rgb(204, 51, 18); /*задаём цвет линии*/
   content: "";
   transition: width 0.3s ease-out; /*задаём время анимации*/
+}
+.header__menu a:hover {
+  color: rgb(204, 51, 18);
 }
 .header__menu a:hover:after, .header__menu a:focus:after {
   width: 100%; /*устанавливаем значение 100% чтобы ссылка подчёркивалась полностью*/
@@ -303,8 +307,19 @@ body::-webkit-scrollbar-track {
   height: 2.1428571429vw;
   padding: 0.2380952381vw;
 }
-.header__inst img {
-  width: 100%;
+.header__inst svg path {
+  fill: inherit;
+  stroke: inherit;
+  stroke-width: inherit;
+}
+.header__inst svg {
+  stroke-width: 100%;
+  fill: rgba(73, 46, 24, 0.8);
+  transition: all 0.3s ease 0s;
+}
+.header__inst svg:hover {
+  fill: red;
+  transition: all 0.3s ease 0s;
 }
 
 .inject {
@@ -989,8 +1004,8 @@ body::-webkit-scrollbar-track {
   margin-bottom: 5.2380952381vw;
 }
 .footer__top-img {
-  width: 3.0476190476vw;
-  height: 3.0476190476vw;
+  width: 2.5714285714vw;
+  height: 2.5714285714vw;
 }
 .footer__top-img img {
   width: 100%;
@@ -1009,7 +1024,7 @@ body::-webkit-scrollbar-track {
 .footer__top-menu nav a {
   position: relative;
   font-weight: 400;
-  font-size: 1.5238095238vw;
+  font-size: 1.1428571429vw;
   line-height: 129%;
   color: #FFE6D1;
   margin-right: 4.2857142857vw;
@@ -1035,7 +1050,7 @@ body::-webkit-scrollbar-track {
   justify-content: center;
 }
 .footer__bottom a {
-  width: 21.9047619048vw;
+  width: 19.0476190476vw;
 }
 .footer__bottom a img {
   width: 100%;
@@ -1494,7 +1509,7 @@ body::-webkit-scrollbar-track {
 }
 .service .accordion .card {
   border-top: 1px solid #CC3312;
-  padding: 4.7619047619vw 0;
+  padding: 2.8571428571vw 0;
 }
 .service .accordion .card:first-child {
   border-top: none;
@@ -1514,7 +1529,7 @@ body::-webkit-scrollbar-track {
   margin-bottom: 1.4285714286vw;
 }
 .service .accordion .card-body li p:first-child {
-  font-size: 2.2857142857vw;
+  font-size: 1.9047619048vw;
   line-height: 107.5%;
   color: #492E18;
 }
@@ -1526,7 +1541,7 @@ body::-webkit-scrollbar-track {
   width: 24.380952381vw;
   font-style: italic;
   font-weight: 400;
-  font-size: 2.1904761905vw;
+  font-size: 1.9047619048vw;
   line-height: 107.5%;
   color: #492E18;
 }
@@ -1550,7 +1565,7 @@ body::-webkit-scrollbar-track {
   align-items: center;
 }
 .service__accord h3 {
-  font-size: 2.2857142857vw;
+  font-size: 1.9047619048vw;
   font-weight: 500;
   line-height: 97.3%;
   color: #492E18;
@@ -1563,7 +1578,7 @@ body::-webkit-scrollbar-track {
 .service__accord-wrap-text {
   font-style: italic;
   font-weight: 400;
-  font-size: 2.2857142857vw;
+  font-size: 1.9047619048vw;
   line-height: 97.3%;
   color: #492E18;
   margin-bottom: 0;

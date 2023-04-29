@@ -99,6 +99,7 @@ body::-webkit-scrollbar-track {
       line-height: 97.3%;
       color: #341E0B;
       margin-right: ($w * 90);
+      transition: all .3s ease 0s;
 
       &:last-child {
         margin-right: 0;
@@ -110,9 +111,13 @@ body::-webkit-scrollbar-track {
         left: 0; /*изменить на right:0;, чтобы изменить направление подчёркивания */
         width: 0;/*задаём длинну линии до наведения курсора*/
         height: 2px; /*задаём ширину линии*/
-        background-color: #341E0B; /*задаём цвет линии*/
+        background-color: rgb(204, 51, 18);; /*задаём цвет линии*/
         content: "";
         transition: width 0.3s ease-out; /*задаём время анимации*/
+      }
+
+      &:hover {
+        color: rgb(204, 51, 18);
       }
       
       &:hover:after,
@@ -131,8 +136,20 @@ body::-webkit-scrollbar-track {
     height: ($w * 45);
     padding: ($w * 5);
 
-    img {
-      width: 100%;
+    svg path {
+      fill:inherit;
+      stroke:inherit;
+      stroke-width:inherit;
+    }
+    svg {
+      stroke-width: 100%;
+      fill: rgba(73, 46, 24, 0.8);
+      transition: all .3s ease 0s;
+
+      &:hover {
+        fill:red;
+        transition: all .3s ease 0s;
+      }
     }
   }
 }
@@ -948,8 +965,8 @@ body::-webkit-scrollbar-track {
     margin-bottom: ($w * 110);
 
     &-img {
-      width: ($w * 64);
-      height: ($w * 64);
+      width: ($w * 54);
+      height: ($w * 54);
 
       img {
         width: 100%;
@@ -970,7 +987,7 @@ body::-webkit-scrollbar-track {
         a {
           position: relative;
           font-weight: 400;
-          font-size: ($w * 32);
+          font-size: ($w * 24);
           line-height: 129%;          
           color: #FFE6D1;
           margin-right: ($w * 90);
@@ -1004,7 +1021,7 @@ body::-webkit-scrollbar-track {
     justify-content: center;
 
     a {
-      width: ($w * 460);
+      width: ($w * 400);
 
       img {
         width: 100%;
@@ -1510,7 +1527,7 @@ body::-webkit-scrollbar-track {
 
     .card {
       border-top: 1px solid #CC3312;
-      padding: ($w * 100) 0;
+      padding: ($w * 60) 0;
 
       &:first-child {
         border-top: none;
@@ -1533,7 +1550,7 @@ body::-webkit-scrollbar-track {
           margin-bottom: ($w * 30);
 
           &:first-child {
-            font-size: ($w * 48);
+            font-size: ($w * 40);
             line-height: 107.5%;
             color: #492E18;
 
@@ -1547,7 +1564,7 @@ body::-webkit-scrollbar-track {
             width: ($w * 512);
             font-style: italic;
             font-weight: 400;
-            font-size: ($w * 46);
+            font-size: ($w * 40);
             line-height: 107.5%;
             color: #492E18;
           }
@@ -1582,7 +1599,7 @@ body::-webkit-scrollbar-track {
     align-items: center;
 
     h3 {
-      font-size: ($w * 48);
+      font-size: ($w * 40);
       font-weight: 500;
       line-height: 97.3%;
       color: #492E18;
@@ -1596,7 +1613,7 @@ body::-webkit-scrollbar-track {
       &-text {
         font-style: italic;
         font-weight: 400;
-        font-size: ($w * 48);
+        font-size: ($w * 40);
         line-height: 97.3%;
         color: #492E18;
         margin-bottom: 0;
