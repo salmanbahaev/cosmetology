@@ -1254,6 +1254,7 @@ body::-webkit-scrollbar-track {
   -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   -webkit-mask-composite: destination-out;
   mask-composite: exclude;
+  -webkit-transform: translate3d(0, 0, 100px);
 }
 .in__list-show p:nth-child(2) {
   z-index: 10;
