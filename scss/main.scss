@@ -39,6 +39,32 @@ $w: (100vw / 2100);
   }
 }
 
+.f_breadcrumb {
+  display: flex;
+  align-items: center;
+  margin-top: ($w * 50);
+
+  div {
+    width: ($w * 5);
+    height: ($w * 5);
+    border-radius: 50%;
+    margin-left: ($w * 50);
+    margin-right: ($w * 50);
+    background: #492E18;
+  }
+
+  a {
+    font-size: ($w * 20);
+    line-height: 97.3%;
+    color: rgba(73, 46, 24, 0.5);
+
+    &:last-child {
+      color: #492E18;
+    }
+  }
+}
+
+
 main {
   background: linear-gradient(90deg, #FDFCFB 0%, #E2D1C3 100%);
   font-family: 'Helvetica Neue', sans-serif;
@@ -1551,31 +1577,6 @@ body::-webkit-scrollbar-track {
     margin: 0 auto;
   }
 
-  &__breadcrumb {
-    display: flex;
-    align-items: center;
-    margin-top: ($w * 50);
-
-    div {
-      width: ($w * 5);
-      height: ($w * 5);
-      border-radius: 50%;
-      margin-left: ($w * 50);
-      margin-right: ($w * 50);
-      background: #492E18;
-    }
-
-    a {
-      font-size: ($w * 20);
-      line-height: 97.3%;
-      color: rgba(73, 46, 24, 0.5);
-
-      &:last-child {
-        color: #492E18;
-      }
-    }
-  }
-
   &__h2 {
     margin-top: ($w * 100);
     margin-bottom: ($w * 55);
@@ -1753,3 +1754,115 @@ body::-webkit-scrollbar-track {
   }
 }
 
+.works-line {
+  width: 100%;
+  border: 1px solid rgba(0, 0, 0, 0.4);
+  margin-top: ($w * 100);
+}
+
+.works,
+.works2,
+.works3 {
+  padding-top: ($w * 91);
+
+  .bread__container {
+    max-width: ($w * 1252);
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  &__container,
+  &__container2,
+  &__container3 {
+    max-width: ($w * 1000);
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  &__h2 {
+    margin-top: ($w * 100);
+    margin-bottom: ($w * 80);
+    font-size: ($w * 80);
+    line-height: 97.3%;
+    color: #492E18;
+    padding-left: 0;
+  }
+
+  &__slider1,
+  &__slider2,
+  &__slider3 {
+    position: relative;
+
+    &-item {
+      width: ($w * 1000);
+      
+      img {
+        width: 100%;
+      }
+    }
+
+    /* Слайдер */
+    .slick-slider{}
+    /* Слайдер запущен */
+    .slick-slider.slick-initialized{}
+    /* Слайдер с точками */
+    .slick-slider.slick-dotted{}
+    /* Ограничивающая оболочка */
+    .slick-list {
+      overflow: hidden;
+    }
+    /* Лента слайдов */
+    .slick-track{
+      display: flex;
+    }
+    /* Слайд */
+    .slick-slide{
+      margin-right: ($w * 15);
+    }
+    /* Слайд активный (показывается) */
+    .slick-slide.slick-active{}
+    /* Слайд основной */
+    .slick-slide.slick-current{}
+    /* Слайд по центру */
+    .slick-slide.slick-center{}
+    /* Клонированный слайд */
+    .slick-slide.slick-cloned{}
+    /* Стрелка */
+    .slick-arrow{
+      position: absolute;
+      top: 50%;
+      right: ($w * -160);
+      font-size: 0;
+      width: ($w * 100);
+      height: ($w * 22);
+    }
+    /* Стрелка влево */
+    .slick-arrow.slick-prev{
+      transform: rotate(180deg);
+      background: url('../img/arrow-work.svg') center / contain no-repeat;
+      left: ($w * -160);
+    }
+    /* Стрелка вправо */
+    .slick-arrow.slick-next{
+      background: url('../img/arrow-work.svg') center / contain no-repeat;
+    }
+    /* Стрелка не активная */
+    .slick-arrow.slick-disabled{}
+    /* Точки (булиты) */
+    .slick-dots{}
+    .slick-dots li{}
+    /* Активная точка */
+    .slick-dots li.slick-active{}
+    /* Элемент точки */
+    .slick-dots li button{}
+  }
+}
+
+.works2,
+.works3 {
+  padding-top: 0;
+}
+
+.works3 {
+  padding-bottom: ($w * 250);
+}
