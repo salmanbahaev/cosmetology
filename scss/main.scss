@@ -2,6 +2,13 @@
 @import 'fonts';
 
 $w: (100vw / 2100);
+$wm: (100vw / 390);
+$max: 479.98px;
+$min: 480px;
+
+body.lock {
+  overflow: hidden;
+}
 
 .call__button {
   width: 100%;
@@ -89,10 +96,10 @@ body::-webkit-scrollbar-track {
 // header
 .header {
   position: fixed;
-  z-index: 10000;
   width: 100%;
   top: 0;
   left: 0;
+  z-index: 10000;
   background: rgba(12, 12, 12, 0.1);
   
   &__container {
@@ -100,8 +107,23 @@ body::-webkit-scrollbar-track {
     max-width: ($w * 1252);
     width: 100%;
     margin: 0 auto;
-    display: flex;
     align-items: center;
+
+    @media (max-width: $max) {
+      max-width: ($wm * 330);
+      padding: 0;
+    }
+  }
+
+  &__menu-pc {
+    
+    @media (min-width: $min) {
+      display: flex;
+    };
+
+    @media (max-width: $max) {
+      display: none;
+    }
   }
 
   &__logo {
@@ -178,6 +200,135 @@ body::-webkit-scrollbar-track {
       }
     }
   }
+
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    // background-color: rgba(12, 12, 12, 0.1);
+    z-index: 3000;
+  }
+
+  // menu burger
+  &__body {
+    position: relative;
+    // z-index: 2000;
+    display: flex;
+    justify-content: space-between;
+    height: ($wm * 40);
+    align-items: center;
+
+    @media (min-width: $min) {
+      display: none;
+    }
+
+    @media (max-width: $max) {
+      display: flex;
+    }
+  }
+
+  &__log {
+    max-width: ($wm * 80);
+    width: 100%;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  &__burger {
+    position: relative;
+    width: ($wm * 20);
+    height: ($wm * 13);
+    z-index: 3000;
+
+    span {
+      position: absolute;
+      background-color: #341E0B;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      top: ($wm * 6);
+      transition: all .3s ease 0s;
+    }
+
+    &::before,
+    &::after {
+      content: '';
+      background-color: #341E0B;
+      position: absolute;
+      width: 100%;
+      height: 1px;
+      left: 0;
+      transition: all .3s ease 0s;
+    }
+
+    &::before {
+      top: 0;
+    }
+
+    &::after {
+      bottom: 0;
+    } 
+
+    &.active span {
+      transform: scale(0);
+      background-color: rgba(255, 230, 209, 0.6);
+    }
+
+    &.active::before {
+      transform: rotate(45deg);
+      top: ($wm * 6);
+      background-color: rgba(255, 230, 209, 0.6);
+    }
+    &.active::after {
+      transform: rotate(-45deg);
+      bottom: ($wm * 6);
+      background-color: rgba(255, 230, 209, 0.6);
+    }
+  }
+
+  &__menu-mobile {
+    position: fixed;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: #3D2A1B;
+    // background-color: #aaa;
+    padding: ($wm * 40) 0;
+    transition: all .3s ease 0s;
+    
+    &.active {
+      top: 0;
+    }
+  }
+
+  &__list {
+
+    li {
+      
+      a {
+        display: block;
+        padding: ($wm * 30);
+        font-weight: 400;
+        font-size: ($wm * 26);
+        line-height: 97.3%;
+        color: #FFE6D1;
+      }
+
+      &:not(:last-child) {
+        border-bottom: 1px solid rgba(255, 230, 209, 0.2);
+      }
+    }
+  }
+
+  &__link {}
 }
 
 .inject {
@@ -1855,6 +2006,13 @@ body::-webkit-scrollbar-track {
     .slick-dots li.slick-active{}
     /* Элемент точки */
     .slick-dots li button{}
+  }
+}
+
+.works {
+
+  @media (max-width: $max) {
+    padding-top: ($wm * 40);
   }
 }
 
