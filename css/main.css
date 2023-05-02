@@ -782,11 +782,6 @@ body::-webkit-scrollbar-track {
   color: rgba(73, 46, 24, 0.8);
   margin-bottom: 3.5714285714vw;
 }
-.learn__button {
-  display: flex;
-  justify-content: end;
-  margin-left: auto;
-}
 .learn__button a {
   position: relative;
   max-width: 8.6666666667vw;
@@ -797,6 +792,7 @@ body::-webkit-scrollbar-track {
   align-items: center;
   border-radius: 50%;
   border: 2px solid #492E18;
+  margin-left: auto;
 }
 .learn__button a img {
   width: 48%;
@@ -1622,12 +1618,11 @@ body::-webkit-scrollbar-track {
 }
 .ques2__ty {
   margin-top: 4.2857142857vw;
-  display: flex;
-  justify-content: end;
 }
 .ques2__ty a {
   margin-right: 5.8095238095vw;
   position: relative;
+  margin-left: auto;
   max-width: 9.1428571429vw;
   height: 9.1428571429vw;
   width: 100%;
@@ -1782,17 +1777,15 @@ body::-webkit-scrollbar-track {
   top: 1.9047619048vw;
   right: -1.6666666667vw;
 }
-.service__btn {
-  display: flex;
-  justify-content: end;
-}
 .service__btn a {
   position: relative;
   display: flex;
+  margin-left: auto;
   justify-content: center;
   align-items: center;
   max-width: 12.380952381vw;
   height: 12.380952381vw;
+  margin-top: 2.380952381vw;
   width: 100%;
   border-radius: 50%;
   border: 2px solid #492E18;

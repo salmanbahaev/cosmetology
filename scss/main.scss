@@ -721,9 +721,6 @@ body::-webkit-scrollbar-track {
   }
 
   &__button {
-    display: flex;
-    justify-content: end;
-    margin-left: auto;
 
     a {
       position: relative;
@@ -735,6 +732,7 @@ body::-webkit-scrollbar-track {
       align-items: center;
       border-radius: 50%;
       border: 2px solid #492E18;
+      margin-left: auto;
 
       img {
         width: 48%;
@@ -1668,12 +1666,11 @@ body::-webkit-scrollbar-track {
 
   &__ty {
     margin-top: ($w * 90);
-    display: flex;
-    justify-content: end;
 
     a {
       margin-right: ($w * 122);
       position: relative;
+      margin-left: auto;
       max-width: ($w * 192);
       height: ($w * 192);
       width: 100%;
@@ -1869,16 +1866,16 @@ body::-webkit-scrollbar-track {
   }
 
   &__btn {
-    display: flex;
-    justify-content: end;
 
     a {
       position: relative;
       display: flex;
+      margin-left: auto;
       justify-content: center;
       align-items: center;
       max-width: ($w * 260);
       height: ($w * 260);
+      margin-top: ($w * 50);
       width: 100%;
       border-radius: 50%;
       border: 2px solid #492E18;
