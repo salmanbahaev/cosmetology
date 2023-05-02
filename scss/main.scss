@@ -119,6 +119,7 @@ body::-webkit-scrollbar-track {
     
     @media (min-width: $min) {
       display: flex;
+      align-items: center;
     };
 
     @media (max-width: $max) {
@@ -202,16 +203,16 @@ body::-webkit-scrollbar-track {
   }
 
 
-  &::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    // background-color: rgba(12, 12, 12, 0.1);
-    z-index: 3000;
-  }
+  // &::before {
+  //   content: '';
+  //   position: absolute;
+  //   top: 0;
+  //   left: 0;
+  //   width: 100%;
+  //   height: 100%;
+  //   background-color: rgba(12, 12, 12, 0.1);
+  //   z-index: 3000;
+  // }
 
   // menu burger
   &__body {
@@ -1873,11 +1874,25 @@ body::-webkit-scrollbar-track {
 
     a {
       position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
       max-width: ($w * 260);
+      height: ($w * 260);
       width: 100%;
+      border-radius: 50%;
+      border: 2px solid #492E18;
+
+      &:hover {
+
+        img {
+          transform: rotate(-46deg);
+        }
+      }
       
       img {
-        width: 100%;
+        width: 42%;
+        transition: all .3s ease 0s;
       }
 
       span {
