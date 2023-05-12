@@ -1288,7 +1288,6 @@ body::-webkit-scrollbar-track {
         text-align: center;
         color: #492E18;
         margin-bottom: 0;
-        position: absolute;
         left: ($wm * -15);
 
         @media (max-width: $max) {
@@ -1460,6 +1459,13 @@ body::-webkit-scrollbar-track {
     }
   }
 
+  .accordion {
+
+    @media (max-width: $max) {
+      box-shadow: 0px ($wm * 0.25) 0px 0px #CC3312;
+    }
+  }
+
   .card,
   .card-header {
     background: transparent;
@@ -1470,8 +1476,17 @@ body::-webkit-scrollbar-track {
   .card {
     border-top: ($w * 1) solid #CC3312;
 
+    @media (max-width: $max) {
+      border-top: none;
+      box-shadow: 0px ($wm * -0.25) 0px 0px #CC3312;
+    }
+
     &:last-child {
       border-bottom: ($w * 1) solid #CC3312;
+
+      @media (max-width: $max) {
+        border-bottom: none;
+      }
     }
   }
 
@@ -1611,6 +1626,8 @@ body::-webkit-scrollbar-track {
             padding: ($wm * 12) ($wm * 10);
             font-size: ($wm * 12);
             margin-bottom: ($wm * 5);
+            box-shadow: 0px 0px 0px ($wm * 0.25) #492E18;
+            border: none;
           }
         }
       }
@@ -1813,10 +1830,19 @@ body::-webkit-scrollbar-track {
 .edu {
   background: url("../img/ed-bg.png") top / cover no-repeat;
 
+  @media (max-width: $max) {
+    background: url("../img/ed-bgm.png") center / cover no-repeat;
+    margin-top: ($wm * 40);
+  }
+
   &__container {
     max-width: ($w * 1252);
     width: 100%;
     margin: 0 auto;
+
+    @media (max-width: $max) {
+      max-width: ($wm * 330);
+    }
 
     h1 {
       padding-top: ($w * 212);
@@ -1826,6 +1852,15 @@ body::-webkit-scrollbar-track {
       color: #FFEEE0;
       max-width: ($w * 920);
       width: 100%;
+
+      @media (max-width: $max) {
+        padding-top: ($wm * 279);
+        font-weight: 500;
+        font-size: ($wm * 32);
+        color: #492E18;
+        max-width: 100%;
+        padding-bottom: ($wm * 40);
+      }
     }
 
     h2 {
@@ -1838,6 +1873,10 @@ body::-webkit-scrollbar-track {
       font-size: ($w * 48);
       line-height: 97.3%;
       color: #FFEEE0;
+
+      @media (max-width: $max) {
+        display: none;
+      }
     }
   }
 }
@@ -1846,10 +1885,19 @@ body::-webkit-scrollbar-track {
   padding-top: ($w * 100);
   padding-bottom: ($w * 100);
 
+  @media (max-width: $max) {
+    padding-top: ($wm * 45);
+    padding-bottom: ($wm * 50);
+  }
+
   &__container {
     max-width: ($w * 1252);
     width: 100%;
     margin: 0 auto;
+
+    @media (max-width: $max) {
+      max-width: ($wm * 330);
+    }
   }
 
   h3 {
@@ -1858,17 +1906,35 @@ body::-webkit-scrollbar-track {
     line-height: 97.3%;
     color: #341E0B;
     margin-bottom: ($w * 50);
+    
+    @media (max-width: $max) {
+      font-size: ($wm * 18);
+      color: #492E18;
+      margin-bottom: ($wm * 28.5);
+    }
   }
 
   &__wrapper {
     display: flex;
+
+    @media (max-width: $max) {
+      flex-direction: column;
+    }
   }
 
   &__left {
     max-width: ($w * 780);
     width: 100%;
 
+    @media (max-width: $max) {
+      max-width: 100%;
+    }
+
     ul {
+
+      @media (max-width: $max) {
+        margin-bottom: ($wm * 48);
+      }
 
       li {
         margin-left: ($w * 36);
@@ -1876,6 +1942,13 @@ body::-webkit-scrollbar-track {
         line-height: 115%;
         color: #492E18;
         position: relative;
+
+        @media (max-width: $max) {
+          font-size: ($wm * 12);
+          max-width: 83%;
+          text-indent: ($wm * 18);
+          margin-left: 0;
+        }
 
         &::before {
           content: '';
@@ -1887,10 +1960,18 @@ body::-webkit-scrollbar-track {
           height: ($w * 7);
           border-radius: 50%;
           background-color: rgba(73, 46, 24, 1);
+
+          @media (max-width: $max) {
+            width: ($wm * 3);
+            height: ($wm * 3);
+            top: ($wm * 5);
+            left: ($wm * 7);
+          }
         }
 
         span {
           text-transform: uppercase;
+          font-style: italic;
         }
       }
   
@@ -1900,6 +1981,12 @@ body::-webkit-scrollbar-track {
         border-bottom: 1px solid rgba(159, 29, 0, 0.5);
         margin-top: ($w * 20);
         margin-bottom: ($w * 20);
+
+        @media (max-width: $max) {
+          margin-left: 0;
+          margin-top: ($wm * 15);
+          margin-bottom: ($wm * 15);
+        }
       }
     }
   }
@@ -1908,11 +1995,21 @@ body::-webkit-scrollbar-track {
     width: ($w * 444);
     margin-left: ($w * 20);
 
+    @media (max-width: $max) {
+      width: ($wm * 330);
+      margin-left: 0;
+    }
+
     div {
       width: ($w * 634);
       height: ($w * 634);
       border-radius: 50%;
       overflow: hidden;
+
+      @media (max-width: $max) {
+        width: ($wm * 330);
+        height: ($wm * 330);
+      }
 
       img {
         width: 100%;
@@ -1927,11 +2024,20 @@ body::-webkit-scrollbar-track {
   padding-bottom: ($w * 60);
   background: linear-gradient(90deg, #271A0E 0%, rgba(149, 126, 108, 0.71) 100%);
 
+  @media (max-width: $max) {
+    padding-top: ($wm * 40);
+    padding-bottom: ($wm * 32);
+  }
+
   &__container {
     max-width: ($w * 1252);
     width: 100%;
     margin: 0 auto;
     position: relative;
+
+    @media (max-width: $max) {
+      max-width: ($wm * 330);
+    }
 
     .in__star1 {
       position: absolute;
@@ -1940,6 +2046,16 @@ body::-webkit-scrollbar-track {
       width: ($w * 268);
       height: ($w * 268);
       filter: blur(1.5px);
+
+      @media (max-width: $max) {
+        filter: none;
+        top: ($wm * 297);
+        right: 0;
+        width: ($wm * 70);
+        height: ($wm * 70);
+        transform: rotate(28deg);
+        z-index: 50000;
+      }
     }
     .in__star2 {
       position: absolute;
@@ -1948,6 +2064,16 @@ body::-webkit-scrollbar-track {
       width: ($w * 151);
       height: ($w * 151);
       filter: blur(1px);
+
+      @media (max-width: $max) {
+        filter: none;
+        top: ($wm * 357);
+        right: ($wm * -5);
+        width: ($wm * 42);
+        height: ($wm * 42);
+        transform: rotate(28deg);
+        z-index: 50000;
+      }
     }
     .in__star3 {
       position: absolute;
@@ -1956,6 +2082,16 @@ body::-webkit-scrollbar-track {
       width: ($w * 95);
       height: ($w * 95);
       filter: blur(1.5px);
+
+      @media (max-width: $max) {
+        filter: none;
+        top: ($wm * 380);
+        right: ($wm * 50);
+        width: ($wm * 25);
+        height: ($wm * 25);
+        transform: rotate(28deg);
+        z-index: 50000;
+      }
     }
   }
 
@@ -1965,11 +2101,21 @@ body::-webkit-scrollbar-track {
     line-height: 97.3%;
     color: #FFECDD;
     margin-bottom: ($w * 80);
+
+    @media (max-width: $max) {
+      font-size: ($wm * 28);
+      text-align: center;
+      margin-bottom: ($wm * 40);
+    }
   }
 
   &__list {
     max-width: ($w * 885);
     width: 100%;
+
+    @media (max-width: $max) {
+      max-width: 100%;
+    }
 
     &-show {
       position: relative;
@@ -1991,6 +2137,39 @@ body::-webkit-scrollbar-track {
         box-shadow: 0px ($w * 5) ($w * 10) rgba(0, 0, 0, 0.19);
         transform: translate3d(0,0,0);
 
+        @media (max-width: $max) {
+          background: none;
+        }
+
+        .in__point-span {
+          
+          @media (max-width: $max) {
+            display: inline-block;
+            width: ($wm * 3);
+            height: ($wm * 3);
+            background-color: rgba(255, 236, 221, 0.8);
+            border-radius: 50%;
+            margin-bottom: ($wm * 3);
+            margin-right: ($wm * 5);
+          }
+        }
+
+        .in__list-br {
+          display: none;
+
+          @media (max-width: $max) {
+            display: block;
+          }
+        }
+
+        @media (max-width: $max) {
+          font-size: ($wm * 14);
+          text-align: center;
+          border-radius: ($wm * 8);
+          padding: ($wm * 6) ($wm * 20) ($wm * 10);
+          font-weight: 300;
+        }
+
         &::after {
           content: '';
           position: absolute;
@@ -2001,6 +2180,10 @@ body::-webkit-scrollbar-track {
           height: ($w * 7);
           border-radius: 50%;
           background-color: rgba(255, 236, 221, 0.8);
+
+          @media (max-width: $max) {
+            display: none;
+          }
         }
 
         &::before {
@@ -2050,10 +2233,19 @@ body::-webkit-scrollbar-track {
         margin-top: ($w * 70);
         cursor: pointer;
 
+        @media (max-width: $max) {
+          margin-top: ($wm * 40);
+        }
+
         &-img {
           width: ($w * 114);
           height: ($w * 114);
           background: url("../img/plus.svg") center / cover no-repeat;
+
+          @media (max-width: $max) {
+            width: ($wm * 48);
+            height: ($wm * 48);
+          }
         }
 
         &-img-toggle {
@@ -2073,6 +2265,14 @@ body::-webkit-scrollbar-track {
             font-size: ($w * 24);
             line-height: 120.3%;
             color: rgba(255, 236, 221, 0.8);
+
+            @media (max-width: $max) {
+              left: ($wm * -18);
+              bottom: ($wm * 9);
+              font-size: ($wm * 9);
+              width: ($wm * 100);
+              font-weight: 300;
+            }
           }
         }
 
@@ -2093,10 +2293,19 @@ body::-webkit-scrollbar-track {
   padding-top: ($w * 150);
   padding-bottom: ($w * 200);
 
+  @media (max-width: $max) {
+    padding-top: ($wm * 50);
+    padding-bottom: ($wm * 150);
+  }
+
   &__container {
     max-width: ($w * 1252);
     width: 100%;
     margin: 0 auto;
+
+    @media (max-width: $max) {
+      max-width: ($wm * 330);
+    }
 
     h2 {
       font-weight: 500;
@@ -2104,6 +2313,11 @@ body::-webkit-scrollbar-track {
       line-height: 97.3%;
       color: #492E18;
       margin-bottom: ($w * 100);
+
+      @media (max-width: $max) {
+        font-size: ($wm * 32); 
+        margin-bottom: ($wm * 50);
+      }
     }
   }
 
@@ -2143,6 +2357,12 @@ body::-webkit-scrollbar-track {
       font-size: 0;
       width: ($w * 100);
       height: ($w * 20);
+
+      @media (max-width: $max) {
+        bottom: ($wm * -50);
+        width: ($wm * 40);
+        height: ($wm * 8);
+      }
     }
     /* Стрелка влево */
     .slick-arrow.slick-prev{
@@ -2168,9 +2388,17 @@ body::-webkit-scrollbar-track {
   &__main {
     display: flex;
 
+    @media (max-width: $max) {
+      flex-direction: column;
+    }
+
     &-img {
       max-width: ($w * 616);
       width: 100%;
+
+      @media (max-width: $max) {
+        max-width: ($wm * 330);
+      }
 
       img {
         width: 100%;
@@ -2183,12 +2411,24 @@ body::-webkit-scrollbar-track {
       margin-left: ($w * 80);
       flex: 1 0;
 
+      @media (max-width: $max) {
+        max-width: ($wm * 330);
+        margin-left: 0;
+      }
+
       h3 {
         font-weight: 500;
         font-size: ($w * 48);
         line-height: 97.3%;
         color: #CC3312;
         margin-bottom: ($w * 50);
+
+        @media (max-width: $max) {
+          margin-top: ($wm * 30);
+          margin-bottom: ($wm * 30);
+          text-align: center;
+          font-size: ($wm * 16);
+        }
       }
 
       p {
@@ -2196,6 +2436,11 @@ body::-webkit-scrollbar-track {
         font-size: ($w * 24);
         line-height: 128.8%;
         color: rgba(73, 46, 24, 0.8);
+
+        @media (max-width: $max) {
+          font-size: ($wm * 12);
+          text-align: center;
+        }
       }
     }
   }
@@ -2206,6 +2451,10 @@ body::-webkit-scrollbar-track {
 
   &__ty {
     margin-top: ($w * 90);
+
+    @media (max-width: $max) {
+      margin-top: ($wm * 50);
+    }
 
     a {
       margin-right: ($w * 122);
@@ -2219,6 +2468,12 @@ body::-webkit-scrollbar-track {
       align-items: center;
       border-radius: 50%;
       border: 2px solid #492E18;
+
+      @media (max-width: $max) {
+        max-width: ($wm * 91);
+        height: ($wm * 91);
+        border: 1px solid #492E18;
+      }
 
       img {
         width: 45%;
@@ -2239,6 +2494,12 @@ body::-webkit-scrollbar-track {
         font-size: ($w * 36);
         line-height: 159.5%;
         color: #492E18;
+
+        @media (max-width: $max) {
+          right: inherit;
+          left: ($wm * -35);
+          font-size: ($wm * 16);
+        }
       }
     }
   }
@@ -2246,10 +2507,18 @@ body::-webkit-scrollbar-track {
 
 .call2 {
   padding-bottom: ($w * 175);
+
+  @media (max-width: $max) {
+    padding-bottom: ($wm * 100);
+  }
 }
 
 .footer__edu {
   background: #3D2A1B;
+
+  @media (max-width: $max) {
+    background: #921A00;
+  }
 }
 
 .main__services {
