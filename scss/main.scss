@@ -251,17 +251,19 @@ body::-webkit-scrollbar-track {
 
   &__burger {
     position: relative;
-    width: ($wm * 20);
-    height: ($wm * 13);
+    width: ($wm * 28);
+    height: ($wm * 21);
+    padding: ($wm * 4);
     z-index: 3000;
 
     span {
       position: absolute;
       background-color: #341E0B;
-      left: 0;
+      left: ($wm * 4);
       width: 100%;
       height: 1px;
-      top: ($wm * 6);
+      width: ($wm * 20);
+      top: ($wm * 10);
       transition: all .3s ease 0s;
     }
 
@@ -270,18 +272,18 @@ body::-webkit-scrollbar-track {
       content: '';
       background-color: #341E0B;
       position: absolute;
-      width: 100%;
+      width: ($wm * 20);
       height: 1px;
-      left: 0;
+      left: ($wm * 4);
       transition: all .3s ease 0s;
     }
 
     &::before {
-      top: 0;
+      top: ($wm * 4);
     }
 
     &::after {
-      bottom: 0;
+      bottom: ($wm * 4);
     } 
 
     &.active span {
@@ -291,12 +293,12 @@ body::-webkit-scrollbar-track {
 
     &.active::before {
       transform: rotate(45deg);
-      top: ($wm * 6);
+      top: ($wm * 10);
       background-color: rgba(255, 230, 209, 0.6);
     }
     &.active::after {
       transform: rotate(-45deg);
-      bottom: ($wm * 6);
+      bottom: ($wm * 10);
       background-color: rgba(255, 230, 209, 0.6);
     }
   }
@@ -2529,10 +2531,26 @@ body::-webkit-scrollbar-track {
   padding-top: ($w * 91);
   padding-bottom: ($w * 100);
 
+  @media (max-width: $max) {
+    padding-top: ($wm * 90);
+    padding-bottom: ($wm * 50);
+  }
+
   &__container {
     max-width: ($w * 1252);
     width: 100%;
     margin: 0 auto;
+
+    @media (max-width: $max) {
+      max-width: ($wm * 330);
+    }
+  }
+
+  .f_breadcrumb {
+
+    @media (max-width: $max) {
+      display: none;
+    }
   }
 
   &__h2 {
@@ -2542,6 +2560,13 @@ body::-webkit-scrollbar-track {
     line-height: 97.3%;
     color: #492E18;
     padding-left: 0;
+
+    @media (max-width: $max) {
+      margin-top: 0;
+      font-size: ($wm * 32);
+      font-weight: 500;
+      margin-bottom: ($wm * 20);
+    }
   }
 
   .accordion {
@@ -2556,8 +2581,18 @@ body::-webkit-scrollbar-track {
       border-top: 1px solid #CC3312;
       padding: ($w * 60) 0;
 
+      @media (max-width: $max) {
+        padding: ($wm * 30) 0;
+        border: none;
+        box-shadow: 0px ($wm * -0.375) 0px 0px #CC3312;
+      }
+
       &:first-child {
         border-top: none;
+
+        @media (max-width: $max) {
+          box-shadow: none;
+        }
       }
     }
 
@@ -2569,6 +2604,12 @@ body::-webkit-scrollbar-track {
       padding: 0;
       padding-top: ($w * 50);
 
+      ul {
+        @media (max-width: $max) {
+          margin-bottom: 0;
+        }
+      }
+
       li {
         display: flex;
         justify-content: space-between;
@@ -2576,14 +2617,27 @@ body::-webkit-scrollbar-track {
         p {
           margin-bottom: ($w * 30);
 
+          @media (max-width: $max) {
+            font-size: ($wm * 16);
+          }
+
           &:first-child {
             font-size: ($w * 40);
             line-height: 107.5%;
             color: #492E18;
 
+            @media (max-width: $max) {
+              font-size: ($wm * 16);
+              max-width: ($wm * 155);
+            }
+
             span {
               font-size: ($w * 40);
               color: rgba(73, 46, 24, 0.8);
+
+              @media (max-width: $max) {
+                font-size: ($wm * 16);
+              }
             }
           }
   
@@ -2594,6 +2648,13 @@ body::-webkit-scrollbar-track {
             font-size: ($w * 40);
             line-height: 107.5%;
             color: #492E18;
+
+            @media (max-width: $max) {
+              font-size: ($wm * 14);
+              width: ($wm * 155);
+              font-style: normal;
+              padding-top: ($wm * 2);
+            }
           }
         }
 
@@ -2631,11 +2692,20 @@ body::-webkit-scrollbar-track {
       line-height: 97.3%;
       color: #492E18;
       margin-bottom: 0;
+
+      @media (max-width: $max) {
+        font-size: ($wm * 16);
+        max-width: ($wm * 152);
+      }
     }
 
     &-wrap {
       position: relative;
       width: ($w * 512);
+
+      @media (max-width: $max) {
+        width: ($wm * 155);
+      }
 
       &-text {
         font-style: italic;
@@ -2644,6 +2714,11 @@ body::-webkit-scrollbar-track {
         line-height: 97.3%;
         color: #492E18;
         margin-bottom: 0;
+
+        @media (max-width: $max) {
+          font-size: ($wm * 14);
+          padding-right: ($wm * 30);
+        }
       }
     }
 
@@ -2653,7 +2728,12 @@ body::-webkit-scrollbar-track {
       position: absolute;
       right: 0;
       top: ($w * 10);
-      transition: all .3s ease 0s;
+      transition: all .2s ease 0s;
+
+      @media (max-width: $max) {
+        width: ($wm * 30);
+        height: ($wm * 6);
+      }
 
       img {
         width: 100%;
@@ -2689,6 +2769,13 @@ body::-webkit-scrollbar-track {
       border-radius: 50%;
       border: 2px solid #492E18;
 
+      @media (max-width: $max) {
+        border: 1px solid #492E18;
+        max-width: ($wm * 91);
+        height: ($wm * 91);
+        margin-top: ($wm * 20);
+      }
+
       &:hover {
 
         img {
@@ -2709,6 +2796,11 @@ body::-webkit-scrollbar-track {
         font-size: ($w * 48);
         line-height: 159.5%;
         color: #492E18;
+
+        @media (max-width: $max) {
+          font-size: ($wm * 16);
+          left: ($wm * -35);
+        }
       }
     }
   }
@@ -2730,6 +2822,10 @@ body::-webkit-scrollbar-track {
   width: 100%;
   border-bottom: 1px solid rgba(0, 0, 0, 0.4);
   margin-top: ($w * 100);
+
+  @media (max-width: $max) {
+    margin-top: ($wm * 50);
+  }
 }
 
 .works,
@@ -2741,6 +2837,16 @@ body::-webkit-scrollbar-track {
     max-width: ($w * 1252);
     width: 100%;
     margin: 0 auto;
+
+    @media (max-width: $max) {
+      max-width: ($wm * 330);
+    }
+
+    .f_breadcrumb {
+      @media (max-width: $max) {
+        display: none;
+      }
+    }
   }
 
   &__container,
@@ -2749,6 +2855,10 @@ body::-webkit-scrollbar-track {
     max-width: ($w * 1000);
     width: 100%;
     margin: 0 auto;
+
+    @media (max-width: $max) {
+      max-width: ($wm * 270);
+    }
   }
 
   &__h2 {
@@ -2758,6 +2868,12 @@ body::-webkit-scrollbar-track {
     line-height: 97.3%;
     color: #492E18;
     padding-left: 0;
+
+    @media (max-width: $max) {
+      margin-top: ($wm * 50);
+      margin-bottom: ($wm * 25);
+      font-size: ($wm * 20);
+    }
   }
 
   &__slider1,
@@ -2767,6 +2883,10 @@ body::-webkit-scrollbar-track {
 
     &-item {
       width: ($w * 1000);
+
+      @media (max-width: $max) {
+        width: ($wm * 270);
+      }
       
       img {
         width: 100%;
@@ -2807,12 +2927,22 @@ body::-webkit-scrollbar-track {
       font-size: 0;
       width: ($w * 100);
       height: ($w * 22);
+
+      @media (max-width: $max) {
+        width: ($wm * 30);
+        height: ($wm * 6);
+        right: ($wm * -44);
+      }
     }
     /* Стрелка влево */
     .slick-arrow.slick-prev{
       transform: rotate(180deg);
       background: url('../img/arrow-work.svg') center / contain no-repeat;
       left: ($w * -160);
+
+      @media (max-width: $max) {
+        left: ($wm * -44);
+      }
     }
     /* Стрелка вправо */
     .slick-arrow.slick-next{
@@ -2844,4 +2974,8 @@ body::-webkit-scrollbar-track {
 
 .works3 {
   padding-bottom: ($w * 250);
+
+  @media (max-width: $max) {
+    padding-bottom: ($wm * 60);
+  }
 }
