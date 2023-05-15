@@ -1561,11 +1561,11 @@ body::-webkit-scrollbar-track {
 }
 
 .call {
-  margin-top: ($w * 150);
+  padding-top: ($w * 150);
   padding-bottom: ($w * 250);
 
   @media (max-width: $max) {
-    margin-top: ($wm * 100);
+    padding-top: ($wm * 100);
     padding-bottom: ($wm * 100);
   }
 

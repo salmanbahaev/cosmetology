@@ -1615,12 +1615,12 @@ body::-webkit-scrollbar-track {
 }
 
 .call {
-  margin-top: 7.1428571429vw;
+  padding-top: 7.1428571429vw;
   padding-bottom: 11.9047619048vw;
 }
 @media (max-width: 479.98px) {
   .call {
-    margin-top: 25.641025641vw;
+    padding-top: 25.641025641vw;
     padding-bottom: 25.641025641vw;
   }
 }
