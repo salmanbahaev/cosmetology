@@ -1,5 +1,34 @@
 $(document).ready(function(){
-
+    
+  $("form").submit(function (e) {
+    e.preventDefault();
+    const form = $(this);
+    const str = form.serialize();
+    $.ajax({
+      type: "POST",
+      url: "/send.php",
+      data: str,
+      success: function (msg) {
+        if (msg == 'ok') {
+		  form.find('input').val('');
+		  form.find('textarea').val('');
+          form.find('.message-success').text('Ваше сообщение отправлено').css({
+            'display': 'inline-block',
+            'margin': '22px 0 0',
+            'width': '100%',
+            'text-align': 'right',
+            'color': 'green',
+            'font-size': '22px'
+          });
+          setTimeout(function () {
+            form.find('.message-success').text('');
+            form.find('.message-success').removeAttr('style');
+          }, 4000);
+        }
+      }
+    });
+  });
+  
   $('.header__burger').click(function(event){
     $('.header__burger,.header__menu-mobile').toggleClass('active');
     $('body').toggleClass('lock');

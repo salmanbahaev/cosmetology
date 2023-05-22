@@ -196,13 +196,13 @@
           <div class="card">
             <div class="card-header" id="headingOne">
               <h2 class="mb-0">
-                <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                   Хватит ли мне одного дня на обучение?
                 </button>
               </h2>
             </div>
         
-            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+            <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
               <div class="card-body">
                 Если Вы действующий косметолог, то одного дня достаточно для ознакомления с новыми техниками и отработкой их на практике. Если Вы начинающий косметолог, то я рекомендую брать программу, которая состоит из двух дней, чтобы отработать практику на большем количестве моделей и глубже погрузиться в обучение. 
               </div>
@@ -291,15 +291,15 @@
 
         <form class="call__form" action="#">
           <div class="call__input">
-            <input type="text" placeholder="Имя">
+            <input required name="username" type="text" placeholder="Имя">
           </div>
 
           <div class="call__input">
-            <input id="phone" type="tel" placeholder="Номер телефона">
+            <input required name="phone" id="phone" type="tel" placeholder="Номер телефона">
           </div>
 
           <div class="call__comments">
-            <textarea type="text" placeholder="Комментарий или вопрос"></textarea>
+            <textarea name="text" type="text" placeholder="Комментарий или вопрос"></textarea>
           </div>
 
           <div class="call__button">
@@ -307,6 +307,7 @@
               <span>перезвоните мне</span>
             </button>
           </div>
+          <div class="message-success"></div>
         </form>
 
       </div>

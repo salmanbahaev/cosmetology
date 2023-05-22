@@ -35,7 +35,7 @@
           <img src="img/inst-black.svg" alt="">
         </a>
         <a href="/" class="header__log">
-          <img src="img/logo.svg" alt="">
+          <img src="img/logo.png" alt="">
         </a>
         <div class="header__burger">
           <span></span>
@@ -250,13 +250,13 @@
           <div class="card">
             <div class="card-header" id="headingOne">
               <h2 class="mb-0">
-                <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                   Хочу сделать губы, но боюсь боли.
                 </button>
               </h2>
             </div>
         
-            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+            <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
               <div class="card-body">
                 Во-первых, перед каждой процедурой увеличения губ всегда выполняется аппликационная анестезия (это крем, в состав которого входит лидокаин, который обезболивает поверхностные слои дермы), при условии отсутствия аллергии.
                 Во-вторых, также при условии отсутствия аллергической реакции на лидокаин, подбирается препарат, в состав которого он входит.
@@ -386,15 +386,15 @@
 
         <form class="call__form" action="#">
           <div class="call__input">
-            <input id="name" type="text" placeholder="Имя">
+            <input required name="username" id="name" type="text" placeholder="Имя">
           </div>
 
           <div class="call__input">
-            <input id="phone" type="tel" placeholder="Номер телефона">
+            <input required name="phone" id="phone" type="tel" placeholder="Номер телефона">
           </div>
 
           <div class="call__comments">
-            <textarea id="comments" type="text" placeholder="Комментарий или вопрос"></textarea>
+            <textarea name="text" id="comments" type="text" placeholder="Комментарий или вопрос"></textarea>
           </div>
 
           <div class="call__button">
@@ -402,6 +402,7 @@
               <span>перезвоните мне</span>
             </button>
           </div>
+          <div class="message-success"></div>
         </form>
 
       </div>
